@@ -51,6 +51,9 @@
 \usepackage{titlesec}
 % Zum Bilder einfach in Tabellen einfügen (valign=t)
 \usepackage[export]{adjustbox}
+\usepackage{circuitikz}
+\usetikzlibrary{decorations.markings,arrows}
+\usepackage{esint}
 
 %%%%%%%%%%%%%%%%%%%%
 % Generelle Makros %
@@ -132,6 +135,7 @@
 
 %Grösse Integral anpassen
 \def\Int{\mbox{\Large$\displaystyle\int$\normalsize}}
+\def\Int{\mbox{\Large$\displaystyle\iint$\normalsize}}
 \def\OInt{\mbox{\Large$\displaystyle\oint$\normalsize}}
 
 %Makro für 'd' von Integral- und Differentialgleichungen 
