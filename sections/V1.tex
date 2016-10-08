@@ -19,3 +19,16 @@ Die \textbf{Elektrostatische Analyse} ist ein Hauptbestandteil des Designs von H
  %TODO: Divergenz und Gradient noch ergänzen
 \end{multicols}
 \clearpage
+\section{Anwendung: pn-Übergang}
+Einige Elektronen füllen die Löcher des Gitters und dadurch entsteht eine Raumladungszone. In dieser Zone ist eine Ladung verteilt, aber die Elektronen sind in diesem Bereich nicht frei. 
+Durch diese Zone können die Elektronen nicht mehr die Löcher füllen.\\
+
+\[ \varrho_p = \dfrac{Q_p}{d_p\cdot d\cdot L} \] %Gesamte Ladung geteilt durch das Volumen
+\[ \varrho_n = \dfrac{Q_n}{d_n\cdot d\cdot L} \] % "
+
+\[\varoiint\limits_{(A)}\vec{E}\cdot\vec{dA} = -\dfrac{\varrho_p}{\varepsilon}\cdot d\cdot L\cdot (x + d_p) \Rightarrow E_{x1}(x) = -\dfrac{\varrho_p}{\varepsilon}\cdot (x + d_p) \]
+
+\[ \varoiint\limits_{(A)}\vec{E}\cdot\vec{n}\cdot \vec{dA} =  \dfrac{Q}{\varepsilon} = \dfrac{\varrho\cdot V}{\varepsilon} = -\dfrac{\varrho_p}{\varepsilon} \]
+
+
+\clearpage
