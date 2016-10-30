@@ -7,6 +7,8 @@
 % Genereller Header
 \documentclass[11pt,twoside,a4paper,fleqn]{article}
 % Dateiencoding
+\usepackage{fontspec}
+\setmainfont{Arial}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}	%ä,ü...
 % Seitenränder
@@ -54,6 +56,8 @@
 \usepackage{circuitikz}
 \usetikzlibrary{decorations.markings,arrows}
 \usepackage{esint}
+\usepackage{graphics}
+
 
 %%%%%%%%%%%%%%%%%%%%
 % Generelle Makros %
@@ -129,9 +133,13 @@
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\Real}{Re}
 \DeclareMathOperator{\Imag}{Im}
-%\DeclareMathOperator{\e}{e}
+\DeclareMathOperator{\euler}{e}
 \DeclareMathOperator{\cov}{cov}
 \DeclareMathOperator{\PolyGrad}{PolyGrad}
+\DeclareMathOperator{\gradient}{grad}
+\DeclareMathOperator{\rotation}{rot}
+\DeclareMathOperator{\divergenz}{div}
+\DeclareMathOperator{\imaginär}{j}
 
 %Grösse Integral anpassen
 \def\Int{\mbox{\Large$\displaystyle\int$\normalsize}}

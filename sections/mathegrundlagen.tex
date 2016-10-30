@@ -1,0 +1,107 @@
+\section{Mathematische Grundlagen}
+\subsection{Vektorfelder}
+\subsubsection{Divergenz}
+	Die Divergenz beschreibt die Quellendichte eines Skalarfeldes. 
+	Interpretiert man ein Vektorfeld als Strömungsfeld, so gibt die Divergenz für jede
+	Stelle die Tendenz an, ob ein Teilchen in der Nähe zu diesem Punkt hin- bzw.
+	von diesem Punkt wegfliesst. Es sagt damit aus, ob und wo das Vektorfeld Quellen
+	(Divergenz grösser als Null) oder Senken (Divergenz kleiner als Null) hat. Ist
+	die Divergenz überall gleich Null, so bezeichnet man das Feld als quellenfrei.\\
+	
+	$\boxed{\divergenz \vec{F}=\nabla \cdot \vec{F}= \frac{\partial(F)}{\partial x}+\frac{\partial(F)}{\partial y}+\frac{\partial(F)}{\partial z}}$	
+\subsubsection{Rotation}
+Interpretiert man ein Vektorfeld als Strömungsfeld, so gibt die Rotation für jeden
+Ort an, wie schnell und um welche Achse ein mitschwimmender Körper rotieren
+würde. Ein Vektorfeld, dessen Rotation überall null ist, nennt man wirbelfrei.\\
+
+$\boxed{\rotation(\vec F)=\nabla\times\vec{F} = 
+	\begin{pmatrix}
+	(F_3)_y - (F_2)_z\\
+	(F_1)_z - (F_3)_x\\
+	(F_2)_x - (F_1)_y
+	\end{pmatrix}}$
+\subsubsection{Gradient}
+Der Gradient zeigt in einem Vektorfeld immer in die Richtung des steilsten Anstiegs. \\
+
+$\boxed{\gradient(f)= \nabla \cdot f= 	
+	\begin{pmatrix}
+	\frac{\partial f}{\partial x}\\
+	\frac{\partial f}{\partial y}\\
+	\frac{\partial f}{\partial z}
+	\end{pmatrix}}$
+\subsubsection{Vektorfeldoperatoren}
+\begin{tabular}{ll}
+	\textbf{Nabla-Operator $\nabla$} & \textbf{Laplace-Operator $\Delta$}\\
+	Operator um kontextabhängig & Operator um einem Skalarfeld\\
+	Divergenz, Rotation oder Gradient darzustellen  &  die Divergenz seines Gradienten zuzuordnen\\
+	$\nabla=\frac{\partial}{\partial x}+\frac{\partial}{\partial y}+\frac{\partial}{\partial z}$&$\Delta=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}$\\
+	&$\Delta \vec{F} = \divergenz(\gradient(\vec{F}))$\\
+	&$\Delta \vec{F} = \nabla \cdot (\nabla \cdot \vec{F})$\\	 
+\end{tabular}
+\subsubsection{Rechenregeln}
+\begin{itemize}
+	\item $\rotation(\gradient f) = 0 \qquad $ ``Gradientenfeld ist wirbelfrei''
+	\item $\divergenz(\rotation \vec{v}) = 0 \qquad $ ``Feld der Rotation ist quellfrei''
+	\item $\divergenz(f\vec{v}) = (\gradient f) \cdot \vec{v} + f \divergenz \vec{v}$
+	\item $\rotation(f\vec{v}) = (\gradient f) \times \vec{v} + f \rotation \vec{v}$
+	\item $\rotation(\rotation \vec{v}) = \gradient(\divergenz \vec{v}) - \Delta \vec{v}$
+\end{itemize}
+\clearpage
+\pagebreak
+\subsection{Integralgesetze}
+\subsubsection{Der Satz von Gauss}
+Das Volumenintegral über die Divergenz eines Vektorfeldes wird in ein Oberflächenintegral umgewandelt.\\
+$\boxed{\int\limits_V \divergenz \vec F dv = \oint\limits_{\partial V} \vec F \cdot \vec{dA}}$
+\subsubsection{Der Satz von Stokes}
+Das Oberflächenintegral über die Rotation eines Vektorfeldes wird in ein Kurvenintegral umgewandelt. \\
+$\boxed{\int\limits_A \rotation \vec{F}\cdot d\vec{A}  = \oint\limits_{\partial A}\vec{F}\cdot d\vec{s}}$
+\subsubsection{Der Satz von Green}
+Die Greensche Formel beschreibt den Zusammenhang zwischen Wegintegral und einem Oberflächenintegral.\\
+$\boxed{\int\limits_A \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} dA = \oint\limits_{\partial A}\vec{F}\cdot d\vec{s}}$
+\subsection{Einheiten}
+\begin{tabular}{|p{2.5cm}||p{2.7cm}|p{4cm}|p{2.7cm}|}
+	\hline
+	& \textbf{Elektr. Feld} & \textbf{Magn. Feld} & \textbf{Strömungsfeld}\\
+	\hline \hline
+	Feldgrösse & $\vec{E}$, $\vec{D}$ & $\vec{H}$, $\vec{B}$
+	& $\vec{E}$, $\vec{J}$ \\
+	\hline
+	Konstante
+	& \parbox{2.7cm}{$\varepsilon_0 = 8.854 \cdot 10^{-12}$\\
+		{\tiny Dielektrizitätskonstante} \vspace{.1cm}} 
+	& \parbox{4cm}{$\mu_0 = 4 \pi \, 10^{-7}$\\ {\tiny Permeabilitätskonstante} \vspace{.1cm}} 
+	& \parbox{2.7cm}{$\sigma=\frac{1}{\rho}$ \\ {\tiny Spezifische
+			Leitfähigkeit}\vspace{.1cm}} \\ 
+	\hline
+	Dichte & $\vec{D}=\varepsilon_0\varepsilon_r\vec{E}$ & 	
+	$\vec{B}=\mu_0\mu_r\vec{H}$
+	& $\vec{J}=\sigma\vec{E}$\\
+	\hline
+\end{tabular}
+\\
+\begin{tabular}{|l|l|l|l|l|l|}
+	\hline
+	$[\varepsilon] = \frac{As}{Vm}$
+	& $[D] = \frac{As}{m^2} = \frac{C}{m^2}$
+	& $[E] = \frac{V}{m}$
+	& $[U] = V$
+	& $[\Psi_{el}] = As = C$
+	& $[C] = F$ \\
+	\hline
+	$[\mu] = \frac{H}{m}=\frac{V s}{A m}$
+	& $[B] = \frac{Vs}{m^2} = T$
+	& $[H] = \frac{A}{m}$
+	& $[V_m] = [\Theta] = A$
+	& $[\Psi_m] = [\Phi_m] = Wb = Vs$
+	& $[L] = \frac{Vs}{A} = H$ \\
+	\hline
+	$[\sigma] = \frac{S}{m}$
+	& $[E] = \frac{V}{m}$
+	& $[J] = \frac{A}{m^2} = 10^{-6} \frac{A}{mm^2}$
+	& $[U] = V$
+	& $[I] = A$
+	& $[R] = \Omega$ \\
+	\hline
+\end{tabular}
+\clearpage
+\pagebreak
