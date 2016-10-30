@@ -2,11 +2,9 @@
 % Dokumentinformationen %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\titleinfo}{ElMag - Formelsammlung}
-\newcommand{\authorname}{\href{mailto:sreinli@hsr.ch}{S. Reinli} }
-%\RequirePackage{luatex85}
-%\def\pgfsysdriver{pgfsys-pdftex.def}
-\newcommand{\authoremail}{\href{mailto:sreinli@hsr.ch}{sreinli@hsr.ch} }
-\newcommand{\versioninfo}{$ Revision: 1.1 $}
+\newcommand{\authorname}{\href{mailto:sreinli@hsr.ch}{S. Reinli} \quad \href{mailto:mgisler@hsr.ch}{M. Gisler} }
+\newcommand{\authoremail}{\href{mailto:sreinli@hsr.ch}{sreinli@hsr.ch} \quad \href{mailto:mgisler@hsr.ch}{M. Gisler} }
+\newcommand{\versioninfo}{$ Revision: 0.1 $}
 
 \include{header/header}
 
@@ -20,9 +18,13 @@
 \tableofcontents
 \thispagestyle{empty}
 \clearpage
+\input{sections/mathegrundlagen}
+\input{sections/elektrostatischeanalyse}
+\input{sections/stationaereanalyse}
+\input{sections/magnetostatischeanalyse}
+\input{sections/maxwellgleichungen}
 \input{sections/V1}
 \input{sections/V2}
 \input{sections/V3}
-\pagebreak
-\input{idiotenseite/IdiotenseiteInclude}
+%\input{idiotenseite/IdiotenseiteInclude}
 \end{document}
