@@ -1,30 +1,48 @@
-\section{Stationäre Strömungsanalyse}
-% Anwendung: Auslegung eines Erdungssystems
-% die Elektrische Leitfähigkeit relevant und nicht die elektrische Permittivität (= Unterschied zu vorherigen Analyse) sonst "Copy-Paste"
-
-\begin{tabular}[h]{ C{.2\linewidth} P{.3\linewidth} P{.4\linewidth} }
-	{\vspace{0pt}\includegraphics[width = 0.15\textwidth]{images/ElStromdichte}} & \textbf{Elektrische Stromdichte} \[ \vec{J} = \dfrac{dI}{dA}\cdot \vec{n}\qquad [\vec{J}] = \dfrac{A}{m^2} \] \[I = \iint\limits_{(A)}\vec{J}\cdot\vec{dA} \] & {\scriptsize \textcolor{blue}{\textbf{dA} - eine kleine zur Stromrichtung senkrechte Fläche \newline $\vec{\textbf{n}}$ - der senkrechte Einheitsvektor der Fläche dA \newline 
-			\textbf{dI}- der durch die Fläche dA fliessende Teil des Stromes I}} \\
-	& \textbf{Kontinuitätsgleichung:} \newline
-	\[ I = -\dfrac{dQ}{dt} = -\dfrac{d}{dt}\iiint\limits_{(V)}\varrho\cdot dV = -\iiint\limits_{(V)}\dfrac{d\varrho}{dt}\cdot dV \] \newline \[ \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = -\iiint\limits_{(V)}\dfrac{d\varrho}{dt}\cdot dV \] 
-	{\scriptsize{In der stationären Strömungsanalyse:}} \newline 
-	\[ \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = 0\] & \\
-	{\vspace{0pt}\includegraphics[width = 0.15\textwidth]{images/OhmschesGesetz}}& \textbf{Ohmsches Gesetz:} & \\
-	
+\section{Stationäre Strömungsanalyse (SCD, Stationray Current Distribution)}
+Die stationäre Strömungsanalyse wird für die Berechnung des Ersatzwiderstand gebraucht
+\subsection{Integralgleichungen}
+\begin{tabular}{|p{.30\textwidth} |p{.70\textwidth}|}
+	\hline 
+	\textbf{Elektrische Stromdichte} \newline
+	\tabbild[width=3cm]{images/ElStromdichte} & Die elektrische Stromdichte kennzeichnet wie dicht zusammengedrängt ein elektrischer Strom fliesst. Damit ist auch die Belastung eines Leiters durch den Strom bekannt.\newline
+	\[ \vec{J} = \dfrac{dI}{dA}\cdot \vec{n}\qquad [\vec{J}] = \dfrac{A}{m^2} \] \[I = \iint\limits_{(A)}\vec{J}\cdot\vec{dA} \] \\
+	\hline
+	\textbf{Kontinuitätsgleichung} \newline
+	\tabbild[width=3cm]{images/Gauss.png} & Der herausfliessende Strom aus einer geschlossenen Fläche ist gleich der Abnahme der Ladung \newline
+		\[ I = -\dfrac{dQ}{dt} = -\dfrac{d}{dt}\iiint\limits_{(V)}\varrho\cdot dV = -\iiint\limits_{(V)}\dfrac{d\varrho}{dt}\cdot dV \]
+	 \[ \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = -\iiint\limits_{(V)}\dfrac{d\varrho}{dt}\cdot dV \]
+	\[ \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = 0\] \\
+	\hline
+	\textbf{Ohmsches Gesetz}\newline
+	\tabbild[width=3cm]{images/OhmschesGesetz.png} & 
+	\[ J= \sigma \cdot E\]
+	\[ R = \varrho\cdot\dfrac{l}{A}\]
+	\[ \sigma = \dfrac{1}{\varrho}\]
+	\[ G = \sigma\cdot\dfrac{A}{l} \]\\
+	\hline
 \end{tabular}
-
-Der gesamte Strom durch die Fläche A
-
-
-
-
-\[ \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = -\iiint\limits_{(V)}\dfrac{d\varrho}{dt}\cdot dV \] 
-und stationär sieht diese Gleichung folgendermassen aus:
-\[ \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = 0\]
-
-\textbf{Ohmsches Gesetz:}
-\[ R = \varrho\cdot\dfrac{l}{A}\]
-\[ \sigma = \dfrac{1}{\varrho}\]
-\[ G = \sigma\cdot\dfrac{A}{l} \]
+\subsection{Differenzialgleichungen der elektrostatischen Analyse}
+\begin{multicols}{2}
+	\textbf{Stationäre Analyse}\\
+	\[\nabla \vec{J} = -\frac{d \rho}{dt}=0\]
+	\textbf{Laplace Gleichung}
+	\[\dfrac{\partial^2\varphi}{\partial x^2} +  \dfrac{\partial^2\varphi}{\partial y^2} + \dfrac{\partial^2\varphi}{\partial z^2} = \Delta \varphi = 0\]	
+\end{multicols}
+\clearpage
+\pagebreak
+\subsection{Randbedingungen}
+\begin{minipage}{8cm}
+	\begin{itemize}
+		\item Der geerdete Rand \[\varphi = 0\]
+		\item Der Rand mit bekannten Potential \[ \varphi = U \]
+		\item Der Rand der Symmetrie \[ \dfrac{\partial\varphi}{\partial n} = 0\]
+		\item Der Rand zwischen zwei Materialien \[\sigma_{1} \cdot \frac{d \varphi_{2}}{dn}=\sigma_{2} \cdot \frac{d \varphi_{1}}{dn}\]
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{8cm}
+	\includegraphics[width=8cm]{images/randbedinung_ES.png}
+\end{minipage}
+\subsection{Anwendung}
+%TODO Beispiel einfügen
 \clearpage
 \pagebreak
