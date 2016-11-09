@@ -3,7 +3,6 @@
 #ignore thumbnails created by windows
 Thumbs.db
 #Ignore files build by Visual Studio
-*.pdf
 *.obj
 *.exe
 *.user
@@ -21,6 +20,7 @@ Thumbs.db
 *.cache
 *.ilk
 *.log
+*.pdf
 [Bb]in
 [Dd]ebug*/
 *.lib
