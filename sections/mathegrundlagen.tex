@@ -41,7 +41,7 @@ $\boxed{\gradient(f)= \nabla \cdot f=
 \subsubsection{Rechenregeln}
 \begin{itemize}
 	\item $\rotation(\gradient f) = 0 \qquad $ ``Gradientenfeld ist wirbelfrei''
-	\item $\divergenz(\rotation \vec{v}) = 0 \qquad $ ``Feld der Rotation ist quellfrei''
+	\item $\divergenz(\rotation \vec{v}) = 0 \qquad $ ``Feld der Rotation ist quellenfrei''
 	\item $\divergenz(f\vec{v}) = (\gradient f) \cdot \vec{v} + f \divergenz \vec{v}$
 	\item $\rotation(f\vec{v}) = (\gradient f) \times \vec{v} + f \rotation \vec{v}$
 	\item $\rotation(\rotation \vec{v}) = \gradient(\divergenz \vec{v}) - \Delta \vec{v}$
@@ -59,7 +59,8 @@ $\boxed{\int\limits_A \rotation \vec{F}\cdot d\vec{A}  = \oint\limits_{\partial 
 Die Greensche Formel beschreibt den Zusammenhang zwischen Wegintegral und einem Oberflächenintegral.\\
 $\boxed{\int\limits_A \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} dA = \oint\limits_{\partial A}\vec{F}\cdot d\vec{s}}$
 \subsection{Einheiten}
-\begin{tabular}{|p{2.5cm}||p{2.7cm}|p{4cm}|p{2.7cm}|}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|p{3cm}||p{3cm}|p{4cm}|p{3cm}|}
 	\hline
 	& \textbf{Elektr. Feld} & \textbf{Magn. Feld} & \textbf{Strömungsfeld}\\
 	\hline \hline
@@ -67,7 +68,7 @@ $\boxed{\int\limits_A \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\par
 	& $\vec{E}$, $\vec{J}$ \\
 	\hline
 	Konstante
-	& \parbox{2.7cm}{$\varepsilon_0 = 8.854 \cdot 10^{-12}$\\
+	& \parbox{3cm}{$\varepsilon_0 = 8.854 \cdot 10^{-12}$\\
 		{\tiny Dielektrizitätskonstante} \vspace{.1cm}} 
 	& \parbox{4cm}{$\mu_0 = 4 \pi \, 10^{-7}$\\ {\tiny Permeabilitätskonstante} \vspace{.1cm}} 
 	& \parbox{2.7cm}{$\sigma=\frac{1}{\rho}$ \\ {\tiny Spezifische
@@ -104,12 +105,13 @@ $\boxed{\int\limits_A \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\par
 	\hline
 \end{tabular}
 \subsection{Weiteres}
-Die Bedeutung der nachfolgenden Integralgleichungen ist die fundamentale Grundlage elektromagnetische Feldtheorie. Der elektrische Strom erzeugt das elektrische Feld in seiner Umgebung (Gausssches Gesetz), der elektrische Strom erzeugt das quellenfreie rotationssymmetrische magnetische Feld (Coulombsches Gesetz), die Verteilung des magnetische Feld durch eine geschlossene Kurve ist der gesamte Strom durch die entsprechende Fläche (Ampèresches Gesetz) und das zeitvariante magnetische Feld induziert eine elektrische Spannung (Faradaysches Gesetz).\\
-Durch die Gesetze von Stoke und Gauss können diese 4 Gesetze in die Maxwellgleichungen überführt werden. 
+Die Bedeutung der nachfolgenden Integralgleichungen ist die fundamentale Grundlage elektromagnetische Feldtheorie. Der elektrische Strom erzeugt das elektrische Feld in seiner Umgebung (Gausssches Gesetz), der elektrische Strom erzeugt das quellenfreie rotationssymmetrische magnetische Feld (Coulombsches Gesetz), die Verteilung des magnetischen Feldes durch eine geschlossene Kurve ist der gesamte Strom durch die entsprechende Fläche (Ampèresches Gesetz) und das zeitvariante magnetische Feld induziert eine elektrische Spannung (Faradaysches Gesetz).\\
+Durch die Gesetze von Stokes und Gauss können diese 4 Gesetze in die Maxwellgleichungen überführt werden. 
+\vspace{-0.8cm}
 \begin{longtable}{p{.30\textwidth} p{.65\textwidth}}
 	\textbf{Elektrostatik} & Die Elektrostatik befasst sich mit ruhenden elektrischen Ladungen, Ladungsverteilungen und den elektrischen Feldern geladener Körper
 	Die Phänomene der Elektrostatik rühren von den Kräften her, die elektrische Ladungen aufeinander ausüben. Diese Kräfte werden vom coulombschen Gesetz beschrieben.\\
-	\textbf{Elektrodynamik} & Die Elektrodynamik befasst sich mit bewegten elektrischen Ladungen und mit zeitlich veränderlichen elektrischen und magnetischen Feldern. Diese Vorggänge werden durch die Maxwellgleichungen beschrieben. \\
+	\textbf{Elektrodynamik} & Die Elektrodynamik befasst sich mit bewegten elektrischen Ladungen und mit zeitlich veränderlichen elektrischen und magnetischen Feldern. Diese Vorgänge werden durch die Maxwellgleichungen beschrieben. \\
 \end{longtable}
 
 \clearpage

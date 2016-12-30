@@ -3,12 +3,11 @@
 %If you have a luatex driver fail uncomment these lines
 \RequirePackage{luatex85}
 \def\pgfsysdriver{pgfsys-pdftex.def}
-
 % Genereller Header
 \documentclass[11pt,twoside,a4paper,fleqn]{article}
 % Dateiencoding
-\usepackage{fontspec}
-\setmainfont{Arial}
+%\usepackage{fontspec}
+%\setmainfont{Calibri}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}	%ä,ü...
 % Seitenränder
@@ -52,6 +51,7 @@
 \usepackage{xcolor}                 % \pagecolor{color}, \textcolor{color}{text}, \colorbox{color}{text}, \fcolorbox{border-color}{fill-color}{text}									
 \usepackage{titlesec}
 % Zum Bilder einfach in Tabellen einfügen (valign=t)
+\usepackage[none]{hyphenat}
 \usepackage[export]{adjustbox}
 \usepackage{circuitikz}
 \usetikzlibrary{decorations.markings,arrows}
