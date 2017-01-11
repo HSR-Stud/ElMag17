@@ -8,10 +8,10 @@ Die stationäre Strömungsanalyse wird für die Berechnung des Ersatzwiderstands
 	\[ \vec{J} = \dfrac{dI}{dA}\cdot \vec{n}\qquad [\vec{J}] = \dfrac{A}{m^2} \] \[I = \iint\limits_{(A)}\vec{J}\cdot\vec{dA} \] \\
 	\hline
 	\textbf{Kontinuitätsgleichung} \newline
-	{\centering\tabbild[width=4cm]{images/Gauss.png}\par} & Der herausfliessende Strom aus einer geschlossenen Fläche ist gleich der Abnahme der Ladung \newline
+	{\centering\tabbild[width=4cm]{images/kontinuitat.JPG}\par} & Der herausfliessende Strom aus einer geschlossenen Fläche ist gleich der Abnahme der Ladung \newline
 		\[ I = -\dfrac{dQ}{dt} = -\dfrac{d}{dt}\iiint\limits_{(V)}\varrho\cdot dV = -\iiint\limits_{(V)}\dfrac{d\varrho}{dt}\cdot dV \]
-	 \[ \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = -\iiint\limits_{(V)}\dfrac{d\varrho}{dt}\cdot dV \]
-	\[ \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = 0\] \\
+	Dies resultiert in der Kontinuitätsgleichung (Allgemeiner Fall)
+	 \[I= \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = -\iiint\limits_{(V)}\dfrac{d\varrho}{dt}\cdot dV \]\\
 	\hline
 	\textbf{Ohmsches Gesetz}\newline
 	{\centering\tabbild[width=4cm]{images/OhmschesGesetz.png}\par} & 
@@ -21,15 +21,18 @@ Die stationäre Strömungsanalyse wird für die Berechnung des Ersatzwiderstands
 	\[ G = \sigma\cdot\dfrac{A}{l} \]\\
 	\hline
 \end{tabular}
-\subsection{Differenzialgleichungen der elektrostatischen Analyse}
-\begin{multicols}{2}
-	\textbf{Stationäre Analyse}\\
-	\[\nabla \vec{J} = -\frac{d \rho}{dt}=0\]
-	\textbf{Laplace Gleichung}
-	\[\dfrac{\partial^2\varphi}{\partial x^2} +  \dfrac{\partial^2\varphi}{\partial y^2} + \dfrac{\partial^2\varphi}{\partial z^2} = \Delta \varphi = 0\]	
-\end{multicols}
 \clearpage
 \pagebreak
+\subsection{Differenzialgleichungen der elektrostatischen Analyse}
+\begin{tabular}{|p{.45\textwidth} |p{.45\textwidth}|}
+	\hline
+	\textbf{Kontinuitätsgleichung}\newline
+	Sagt aus wieviel Ladung auf dem Volumen auftritt\newline
+	\[\divergenz \vec{J}=\nabla \vec{J} = -\dfrac{\partial\rho}{\partial t}\]&
+	\textbf{Laplace Gleichung}
+	\[\dfrac{\partial^2\varphi}{\partial x^2} +  \dfrac{\partial^2\varphi}{\partial y^2} + \dfrac{\partial^2\varphi}{\partial z^2} = \Delta \varphi = 0\]\\
+	\hline
+\end{tabular}
 \subsection{Randbedingungen}
 \begin{minipage}{8cm}
 	\begin{itemize}
@@ -42,7 +45,14 @@ Die stationäre Strömungsanalyse wird für die Berechnung des Ersatzwiderstands
 \begin{minipage}{8cm}
 	\includegraphics[width=8cm]{images/randbedinung_ES.png}
 \end{minipage}
-\subsection{Anwendung}
-%TODO Beispiel einfügen
+\subsection{Randwertproblem}
+\begin{multicols}{2}
+	\begin{itemize}
+		\item $\dfrac{\partial^2\varphi}{\partial x^2} +  \dfrac{\partial^2\varphi}{\partial y^2} + \dfrac{\partial^2\varphi}{\partial z^2}=0 $
+		\item $\varphi(x,y,z)=0 \in \Gamma_e$
+		\item $\varphi(x,y,z)=U \in \Gamma_b$
+		\item $ \dfrac{\partial\varphi(x,y,z)}{\partial n} = 0 \in \Gamma_s$
+	\end{itemize}
+\end{multicols}
 \clearpage
 \pagebreak

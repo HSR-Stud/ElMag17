@@ -8,7 +8,8 @@
 	(Divergenz grösser als Null) oder Senken (Divergenz kleiner als Null) hat. Ist
 	die Divergenz überall gleich Null, so bezeichnet man das Feld als quellenfrei.\\
 	
-	$\boxed{\divergenz \vec{F}=\nabla \cdot \vec{F}= \frac{\partial(F)}{\partial x}+\frac{\partial(F)}{\partial y}+\frac{\partial(F)}{\partial z}}$	
+	$\boxed{\divergenz \vec{F}=\nabla \cdot \vec{F}= \frac{\partial(F)}{\partial x}+\frac{\partial(F)}{\partial y}+\frac{\partial(F)}{\partial z}}$
+
 \subsubsection{Rotation}
 Interpretiert man ein Vektorfeld als Strömungsfeld, so gibt die Rotation für jeden
 Ort an, wie schnell und um welche Achse ein mitschwimmender Körper rotieren
@@ -20,6 +21,7 @@ $\boxed{\rotation(\vec F)=\nabla\times\vec{F} =
 	(F_1)_z - (F_3)_x\\
 	(F_2)_x - (F_1)_y
 	\end{pmatrix}}$
+
 \subsubsection{Gradient}
 Der Gradient zeigt in einem Vektorfeld immer in die Richtung des steilsten Anstiegs. \\
 
@@ -29,6 +31,15 @@ $\boxed{\gradient(f)= \nabla \cdot f=
 	\frac{\partial f}{\partial y}\\
 	\frac{\partial f}{\partial z}
 	\end{pmatrix}}$
+
+\subsubsection{Vektorpotential}
+Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetischen Flussdichte B(r) zu vereinfachen. \\
+	$\boxed{\begin{matrix}
+		B=\mu H\\
+		B=\rotation A\\
+		\varphi=\oint\limits_{C}A dr
+		\end{matrix}}$
+
 \subsubsection{Vektorfeldoperatoren}
 \begin{tabular}{ll}
 	\textbf{Nabla-Operator $\nabla$} & \textbf{Laplace-Operator $\Delta$}\\
@@ -46,8 +57,70 @@ $\boxed{\gradient(f)= \nabla \cdot f=
 	\item $\rotation(f\vec{v}) = (\gradient f) \times \vec{v} + f \rotation \vec{v}$
 	\item $\rotation(\rotation \vec{v}) = \gradient(\divergenz \vec{v}) - \Delta \vec{v}$
 \end{itemize}
+\subsubsection{Laplace-Operator Koordinatentranfsormation}
+\begin{itemize}
+	\item Laplace-Operator in kartesischen Koordinaten
+	\[\Delta U(x,y,z) = \frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}\]
+	\item Laplace-Operator in Zylinderkoordinaten
+	\[\Delta U(\rho,\varphi,z) = \frac{1}{\rho} \dfrac{\partial}{\partial \rho} \left( \rho \frac{\partial U}{\partial \rho}\right) + \frac{1}{\rho^2}\frac{\partial^2 U}{\partial \varphi^2}+\dfrac{\partial^2 U}{\partial z^2} \]
+	\item Laplace-Operator in Kugelkoordinaten
+	\[\Delta U(r,\vartheta,\varphi) = \frac{1}{r^2} \dfrac{\partial}{\partial r} \left( r^2 \frac{\partial U}{\partial r}\right) + \frac{1}{r^2 \sin(\vartheta)}\frac{\partial}{\partial \vartheta}\left(sin(\vartheta)\dfrac{\partial U}{\partial \vartheta} \right) +\frac{1}{r^2 sin^2(\vartheta)}\dfrac{\partial^2 U}{\partial \varphi^2}\]
+\end{itemize}
+\subsection{Differentialrechnung}
+\subsubsection{Ableitungsregeln}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|l|}
+	\hline \textbf{Konstantenregeln}& $c'=0'$\\
+	\hline \textbf{Faktorenregeln}& $(cu)'=c u'$\\
+	\hline \textbf{Summenregel}& $(u\pm v)'= u' \pm v'$\\
+	\hline \textbf{Produktregel}& $(uv)'=u'v + uv'$\\
+	\hline \textbf{Quotientenregel}& $(\frac{u}{v})'= \frac{u'v-uv'}{u^{2}}$\\
+	\hline \textbf{Kettenregel}& $y=u(v(x)) ; y'=\frac{du}{dv} \frac{dv}{dx}$\\
+	\hline \textbf{Potenzregel} & $(u^{a})'=au^{a-1}$\\
+	& $(\frac{1}{u})'= \frac{u'}{u^2}$\\
+	\hline	\textbf{Wurzelregel} & $f(x)=\sqrt{x} ; f'(x)=\frac{1}{2\sqrt{x}}$\\
+	\hline	\textbf{Logarithmusregel} & $\ln{u}'=\frac{u'}{u}$\\ 
+	\hline	\textbf{Differentation der Umkehrfunktion} & $(f^{-1})'(y)=\frac{1}{f'(x)} $\\
+	\hline 
+\end{tabular}
+\subsubsection{Ableitung elementarer Funktionen}
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{|l|l||l|l|}
+	\hline
+	\textbf{Funktion} & \textbf{Ableitung} & \textbf{Funktion} &
+	\textbf{Ableitung}\\\hline
+	\hline $C$ (Konstante) & 0 & $\sec x$ & $\dfrac{\sin x}{\cos^2 x}$ \\
+	\hline $x$ & 1 & $\sec^{-1} x$ & $\dfrac{-\cos x}{\sin^2 x}$\\
+	\hline $x^n$ ($n\in\mathbb{R}$) & $nx^{n-1}$ & $\arcsin x \quad (|x| < 1)$ &
+	$\dfrac{1}{\sqrt{1-x^2}}$\\
+	\hline $\dfrac{1}{x}$ & $-\dfrac{1}{x^2}$ & $\arccos x \quad (|x| < 1)$ &
+	$-\dfrac{1}{\sqrt{1-x^2}}$\\
+	\hline $\dfrac{1}{x^n}$ & $-\dfrac{n}{x^{n+1}}$ & $\arctan x$ & $\dfrac{1}{1+x^2}$\\
+	\hline $\sqrt{x}$ & $\dfrac{1}{2\sqrt{x}}$ & $\arccot{x} $ & $-\dfrac{1}{1+x^2}$\\
+	\hline $\sqrt[n]{x}\quad (n\in\mathbb{R}, n \neq 0, x > 0)$ &
+	$\dfrac{1}{n\sqrt[n]{x^{n-1}}}$ & $\arcsec x$ & $\dfrac{1}{x\sqrt{x^2-1}}$\\
+	\hline $\mathrm{e}^x$ & $\mathrm{e}^x$ & $\arcossec x$ & $-\dfrac{1}{x\sqrt{x^2-1}}$\\
+	\hline $\mathrm{e}^{bx}\quad (b\in\mathbb{R})$ & $b\mathrm{e}^{bx}$ & $\sinh x$ &
+	$\cosh x$\\
+	\hline $a^x\quad (a > 0)$ & $a^x\ln a$ & $\cosh x$ & $\sinh x$\\
+	\hline $a^{bx}\quad (b\in\mathbb{R}, a > 0)$ & $ba^{bx}\ln a$ & $\tanh x$ &
+	$\dfrac{1}{\cosh^2 x}$\\
+	\hline $\ln x$ & $\dfrac{1}{x}$ & $\coth x \quad(x \neq 0)$ & $-\dfrac{1}{\sinh^2 x}$\\
+	\hline $\log_a{x} \quad (a > 0, a \neq 1, x > 0)$ &
+	$\dfrac{1}{x}\log_a{\mathrm{e}}=\dfrac{1}{x\ln a}$ & $\arsinh x$ &
+	$\dfrac{1}{\sqrt{1+x^2}}$\\
+	\hline $\lg x \quad (x > 0)$ & $\dfrac{1}{x}\lg \mathrm{e}\approx \dfrac{0.4343}{x}$
+	& $\arcosh x \quad (x > 1)$ & $\dfrac{1}{\sqrt{x^2-1}}$\\
+	\hline $\sin x$ & $\cos x$ & $\artanh x \quad (|x| < 1)$ & $\dfrac{1}{1-x^2}$\\
+	\hline $\cos x$ & $-\sin x$ & $\arcoth x \quad (|x| > 1)$ & $-\dfrac{1}{x^2-1}$\\
+	\hline $\tan x \quad (x\neq(2k+1)\dfrac{\pi}{2}, k\in\mathbb{Z})$ & $\dfrac{1}{\cos^2
+		x}=\sec^2 x$ & $[f(x)]^n \quad (n\in\mathbb{R})$ & $n[f(x)]^{n-1}f'(x)$\\
+	\hline $\cot x \quad (x\neq k\pi, k\in\mathbb{Z})$ & $\dfrac{-1}{\sin^2 x}=-cosec^2x$ & $\ln f(x) \quad (f(x)> 0)$ & $\dfrac{f'(x)}{f(x)}$\\
+	\hline
+\end{tabular}
 \clearpage
 \pagebreak
+
 \subsection{Integralgesetze}
 \subsubsection{Der Satz von Gauss}
 Das Volumenintegral über die Divergenz eines Vektorfeldes wird in ein Oberflächenintegral umgewandelt.\\
@@ -58,52 +131,6 @@ $\boxed{\int\limits_A \rotation \vec{F}\cdot d\vec{A}  = \oint\limits_{\partial 
 \subsubsection{Der Satz von Green}
 Die Greensche Formel beschreibt den Zusammenhang zwischen Wegintegral und einem Oberflächenintegral.\\
 $\boxed{\int\limits_A \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} dA = \oint\limits_{\partial A}\vec{F}\cdot d\vec{s}}$
-\subsection{Einheiten}
-\renewcommand{\arraystretch}{2}
-\begin{tabular}{|p{3cm}||p{3cm}|p{4cm}|p{3cm}|}
-	\hline
-	& \textbf{Elektr. Feld} & \textbf{Magn. Feld} & \textbf{Strömungsfeld}\\
-	\hline \hline
-	Feldgrösse & $\vec{E}$, $\vec{D}$ & $\vec{H}$, $\vec{B}$
-	& $\vec{E}$, $\vec{J}$ \\
-	\hline
-	Konstante
-	& \parbox{3cm}{$\varepsilon_0 = 8.854 \cdot 10^{-12}$\\
-		{\tiny Dielektrizitätskonstante} \vspace{.1cm}} 
-	& \parbox{4cm}{$\mu_0 = 4 \pi \, 10^{-7}$\\ {\tiny Permeabilitätskonstante} \vspace{.1cm}} 
-	& \parbox{2.7cm}{$\sigma=\frac{1}{\rho}$ \\ {\tiny Spezifische
-			Leitfähigkeit}\vspace{.1cm}} \\ 
-	\hline
-	Dichte & $\vec{D}=\varepsilon_0\varepsilon_r\vec{E}$ & 	
-	$\vec{B}=\mu_0\mu_r\vec{H}$
-	& $\vec{J}=\sigma\vec{E}$\\
-	\hline
-\end{tabular}
-\\
-\begin{tabular}{|l|l|l|l|l|l|}
-	\hline
-	$[\varepsilon] = \frac{As}{Vm}$
-	& $[D] = \frac{As}{m^2} = \frac{C}{m^2}$
-	& $[E] = \frac{V}{m}$
-	& $[U] = V$
-	& $[\Psi_{el}] = As = C$
-	& $[C] = F$ \\
-	\hline
-	$[\mu] = \frac{H}{m}=\frac{V s}{A m}$
-	& $[B] = \frac{Vs}{m^2} = T$
-	& $[H] = \frac{A}{m}$
-	& $[V_m] = [\Theta] = A$
-	& $[\Psi_m] = [\Phi_m] = Wb = Vs$
-	& $[L] = \frac{Vs}{A} = H$ \\
-	\hline
-	$[\sigma] = \frac{S}{m}$
-	& $[E] = \frac{V}{m}$
-	& $[J] = \frac{A}{m^2} = 10^{-6} \frac{A}{mm^2}$
-	& $[U] = V$
-	& $[I] = A$
-	& $[R] = \Omega$ \\
-	\hline
-\end{tabular}
 \subsection{Weiteres}
 Die Bedeutung der nachfolgenden Integralgleichungen ist die fundamentale Grundlage elektromagnetische Feldtheorie. Der elektrische Strom erzeugt das elektrische Feld in seiner Umgebung (Gausssches Gesetz), der elektrische Strom erzeugt das quellenfreie rotationssymmetrische magnetische Feld (Coulombsches Gesetz), die Verteilung des magnetischen Feldes durch eine geschlossene Kurve ist der gesamte Strom durch die entsprechende Fläche (Ampèresches Gesetz) und das zeitvariante magnetische Feld induziert eine elektrische Spannung (Faradaysches Gesetz).\\
 Durch die Gesetze von Stokes und Gauss können diese 4 Gesetze in die Maxwellgleichungen überführt werden. 
@@ -113,6 +140,38 @@ Durch die Gesetze von Stokes und Gauss können diese 4 Gesetze in die Maxwellgle
 	Die Phänomene der Elektrostatik rühren von den Kräften her, die elektrische Ladungen aufeinander ausüben. Diese Kräfte werden vom coulombschen Gesetz beschrieben.\\
 	\textbf{Elektrodynamik} & Die Elektrodynamik befasst sich mit bewegten elektrischen Ladungen und mit zeitlich veränderlichen elektrischen und magnetischen Feldern. Diese Vorgänge werden durch die Maxwellgleichungen beschrieben. \\
 \end{longtable}
+\subsection{Einheiten}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{3.5cm}|p{1.5cm}|p{3cm}||p{3.5cm}|p{1.5cm}|p{3.2cm}|}
+	\hline
+	\textbf{Name}			&\textbf{Zeichen} & \textbf{Einheit}&
+	\textbf{Name}			&\textbf{Zeichen} & \textbf{Einheit}\\
+	\hline
+	\textbf{Elektr. Feld} 	& $\vec{E}$	& $[E] = \frac{V}{m}$&	
+	\textbf{Magn. Feld}		& $\vec{H}$ & $[H] = \frac{A}{m}$\\
+	\hline
+	\textbf{Elektr. Flussdichte}&$\vec{D}$&$[D] = \frac{C}{m^2}$&
+	\textbf{Magn. Flussdichte}&$\vec{B}$&$[B] = \frac{Vs}{m^2}=T$\\
+	\hline
+	\textbf{Elektr. Stromdichte} &$\vec{J}$& $[J]=\frac{A}{m^2}$&
+	\textbf{Elektr. Widerstand} &$R$ &$[R]=\Omega$\\
+	\hline
+	\textbf{Spannung}&$U$&$[U]=V$&
+	\textbf{Strom}&$I$&$[I]=A$\\
+	\hline
+	\textbf{Induktivität}&$L$&$[L]=\frac{Vs}{A}=H$&
+	\textbf{Magn. Spannung}&$V_{m}=\Theta$&$[V_{m}]=A$\\
+	\hline
+	\textbf{Kapazität}&$C$&$[C]=F$&
+	\textbf{Magn. Fluss}&$\phi$&$[\phi]=Wb=Vs$\\
+	\hline
+	\textbf{Permeabilität}&$\mu_{0} $&$[\mu_{0}]=4\pi 10^{-7}$&
+	\textbf{Permittivität}&$\epsilon_{0}$&$[\epsilon_{0}]=8.854\cdot 10^{-12}$\\
+	\hline
+	\textbf{Spez. Leitfähigkeit}&$\sigma$&$[\sigma]=\frac{S}{m}$&
+	\textbf{Spez. Widerstand}&$\rho $&$[\rho]=\Omega m $\\
+	\hline
+\end{tabular}
 
 \clearpage
 \pagebreak
