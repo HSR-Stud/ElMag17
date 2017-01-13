@@ -40,6 +40,8 @@ Die elektrostatische Analyse arbeitet mit dem elektrostatischen (ruhenden) Feld.
 		\item Der geerdete Rand \[\varphi(x,y,z) = 0\]
 		\item Der Rand mit bekannten Potential \[ \varphi(x,y,z) = A \]
 		\item Der Rand der Symmetrie \[ \dfrac{\partial\varphi(x,y,z)}{\partial n} = 0\]
+		\item Der Rand zwischen zwei Materialien \[\varphi_{1}=\varphi_{2}\]
+		\[\epsilon_1 \cdot E_{1}=\epsilon_2 \cdot E_{2}\]
 	\end{itemize}
 \end{minipage}
 \begin{minipage}{8cm}
@@ -54,16 +56,16 @@ Die elektrostatische Analyse arbeitet mit dem elektrostatischen (ruhenden) Feld.
 	\item $ \dfrac{\partial\varphi(x,y,z)}{\partial n} = 0 \in \Gamma_s$
 \end{itemize}
 \end{multicols}
-
-%\subsection{Anwendung: pn-Übergang}
-%Einige Elektronen füllen die Löcher des Gitters und dadurch entsteht eine Raumladungszone. In dieser Zone ist eine Ladung verteilt, aber die Elektronen sind in diesem Bereich nicht frei. 
-%Durch diese Zone können die Elektronen nicht mehr die Löcher füllen.\\
-%
-%\[ \varrho_p = \dfrac{Q_p}{d_p\cdot d\cdot L} \] %Gesamte Ladung geteilt durch das Volumen
-%\[ \varrho_n = \dfrac{Q_n}{d_n\cdot d\cdot L} \] % "
-%
-%\[\varoiint\limits_{(A)}\vec{E}\cdot\vec{dA} = -\dfrac{\varrho_p}{\varepsilon}\cdot d\cdot L\cdot (x + d_p) \Rightarrow E_{x1}(x) = -\dfrac{\varrho_p}{\varepsilon}\cdot (x + d_p) \]
-%
-%\[ \varoiint\limits_{(A)}\vec{E}\cdot\vec{n}\cdot \vec{dA} =  \dfrac{Q}{\varepsilon} = \dfrac{\varrho\cdot V}{\varepsilon} = -\dfrac{\varrho_p}{\varepsilon} \]
+\subsection{Vorgehen}
+\begin{enumerate}
+	\item Partielle Differentialgleichung 2. Ordnung des Potentials aufstellen (Poisson oder Laplace)
+	\item Koordinatentransformation wenn nötig
+	\item Vereinfachung der partiellen DGL in eine gewöhnliche DGL 
+	\subitem Von welcher Variable hängt das Potential ab
+	\item Aufstellen der Randbedingungen
+	\subitem Randwerte für Potential und E-Feld
+	\item Gewöhnliche DGL 2x integrieren und nach Potential auflösen
+	\item Randwerte einsetzen und unbekannte Konstanten bestimmen
+\end{enumerate}
 \clearpage
 \pagebreak

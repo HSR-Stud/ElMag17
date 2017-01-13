@@ -48,7 +48,8 @@ Eine Elektromagnetische Welle erfüllt immer die nachfolgenden Gleichung. Anhand
 	\divergenz \vec{E}=0\\
 	\divergenz \vec{B}=0\\
 	\rotation \vec{E}=\epsilon_{0}\mu_{0} \frac{\partial \vec{E}}{\partial t}\\
-	\rotation \vec{B}=-\dfrac{\partial \vec{B}}{\partial t}
+	\rotation \vec{B}=-\dfrac{\partial \vec{B}}{\partial t}\\
+	\rotation \vec{E}=-\mu_{0}\dfrac{\partial \vec{H}}{\partial t}
 	\end{matrix}\]
 \end{minipage}
 \begin{minipage}{8cm}
@@ -71,11 +72,25 @@ Eine Elektromagnetische Welle erfüllt immer die nachfolgenden Gleichung. Anhand
 	\begin{itemize}
 		\item Zeitbereich: $\Delta\vec{H}-\mu\sigma\frac{\partial \vec{H}}{\partial t}-\mu\epsilon\frac{\partial^{2}\vec{H}}{\partial t^{2}}=0$
 		\item Frequenzbereich: $\Delta \vec{H}-\imaginär\omega\mu\sigma\vec{H}+\omega^{2}\mu\epsilon\vec{H}=0$
+		\item Sobald eine Welle auf einen Rand trifft wird immer ein Teil refklektiert und der andere geht durch
 	\end{itemize}	
 \end{minipage}
 \begin{minipage}{8cm}
 	\includegraphics[width=4cm]{images/Randwertproblem.jpg}
 \end{minipage}
+\subsection{Vorgehen}
+	\begin{enumerate}
+		\item Partielle Differentialgleichung 2. Ordnung der Welle aufstellen (Elektrisch oder Magnetisch)
+		\item In Frequenzbereich transformieren (Annahme sinusförmige Anregung)
+		\subitem $\dfrac{\partial \vec{F}}{\partial t}= j\omega F $
+		\item Differentialgleichung vereinfachen
+		\item Aufstellen der Randbedingungen
+		\subitem Randwerte für E-Feld und H-Feld
+		\item Wellengleichung mittels Charakteristischem Polynom lösen da Homogen
+		\item Bestimmung der Unbekannten Amplituden mittels den Randbedingungen
+	\end{enumerate}
+\clearpage
+\pagebreak
 \subsection{Grundlagen zu den Maxwellgleichungen}
 Die Maxwell Gleichungen beschreiben, dass die Feldlinien eines sich ändernden Magnetfeldes von ringförmigen elektrischen Feldlinien umgeben sind, auch ohne Vorhandensein von elektrischen Leitern. Darauf die Theorie der elektromagnetischen Wellen auf. Grundlage der Maxwellschen Theorie sind die Maxwellschen Gleichungen. Es zeigt sich, dass die Lösungen der Gleichungen elektromagnetische Wellen beschreiben.\\
 \begin{tabular}{|p{.45\textwidth} |p{.45\textwidth}|}
@@ -89,8 +104,13 @@ Die Maxwell Gleichungen beschreiben, dass die Feldlinien eines sich ändernden M
 	Sagt aus wieviel Ladung sich im Raum befindet\newline
 	\[ \rho  = \frac{Q}{V}\]&
 	\textbf{Elektrische Stromdichte}\newline
-	Sagt aus wie die LAdung rämumlich verteilt sind\newline
+	Sagt aus wie die Ladung rämumlich verteilt ist\newline
 	\[\vec{J}=\rho \cdot \vec{v}\]\\
+	\hline
+	\textbf{Wellenimpedanz der Luft}\newline
+	\[Z_{0}=\sqrt{\frac{\mu_{0}}{\epsilon_{0}}} \]&
+	\textbf{Wellenimpedanz eines Isolators}\newline
+	\[Z=\sqrt{\frac{\mu_{0}}{\epsilon}} \]\\
 	\hline
 \end{tabular}
 \clearpage

@@ -8,7 +8,7 @@
 	(Divergenz grösser als Null) oder Senken (Divergenz kleiner als Null) hat. Ist
 	die Divergenz überall gleich Null, so bezeichnet man das Feld als quellenfrei.\\
 	
-	$\boxed{\divergenz \vec{F}=\nabla \cdot \vec{F}= \frac{\partial(F)}{\partial x}+\frac{\partial(F)}{\partial y}+\frac{\partial(F)}{\partial z}}$
+	$\boxed{\divergenz \vec{F}=\nabla \cdot \vec{F}= \frac{\partial F}{\partial x}+\frac{\partial F}{\partial y}+\frac{\partial F}{\partial z}}$
 
 \subsubsection{Rotation}
 Interpretiert man ein Vektorfeld als Strömungsfeld, so gibt die Rotation für jeden
@@ -20,7 +20,7 @@ $\boxed{\rotation(\vec F)=\nabla\times\vec{F} =
 	(F_3)_y - (F_2)_z\\
 	(F_1)_z - (F_3)_x\\
 	(F_2)_x - (F_1)_y
-	\end{pmatrix}}$
+	\end{pmatrix} = \left({\frac {\partial F_{z}}{\partial y}}-{\frac {\partial F_{y}}{\partial z}}\right){\hat {e}}_{x}+\left({\frac {\partial F_{x}}{\partial z}}-{\frac {\partial F_{z}}{\partial x}}\right){\hat {e}}_{y}+\left({\frac {\partial F_{y}}{\partial x}}-{\frac {\partial F_{x}}{\partial y}}\right){\hat {e}}_{z}}$
 
 \subsubsection{Gradient}
 Der Gradient zeigt in einem Vektorfeld immer in die Richtung des steilsten Anstiegs. \\
@@ -30,7 +30,7 @@ $\boxed{\gradient(f)= \nabla \cdot f=
 	\frac{\partial f}{\partial x}\\
 	\frac{\partial f}{\partial y}\\
 	\frac{\partial f}{\partial z}
-	\end{pmatrix}}$
+	\end{pmatrix} ={\frac {\partial f}{\partial x}}{\hat {e}}_{x}+{\frac {\partial f}{\partial y}}{\hat {e}}_{y}+{\frac {\partial f}{\partial z}}{\hat {e}}_{z} }$
 
 \subsubsection{Vektorpotential}
 Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetischen Flussdichte B(r) zu vereinfachen. \\
@@ -45,7 +45,7 @@ Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetische
 	\textbf{Nabla-Operator $\nabla$} & \textbf{Laplace-Operator $\Delta$}\\
 	Operator um kontextabhängig & Operator um einem Skalarfeld\\
 	Divergenz, Rotation oder Gradient darzustellen  &  die Divergenz seines Gradienten zuzuordnen\\
-	$\nabla=\frac{\partial}{\partial x}+\frac{\partial}{\partial y}+\frac{\partial}{\partial z}$&$\Delta=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}$\\
+	$\nabla F=\frac{\partial F}{\partial x}+\frac{\partial F}{\partial y}+\frac{\partial F}{\partial z}$&$\Delta F=\frac{\partial^{2}F}{\partial x^{2}F}+\frac{\partial^{2}F}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}$\\
 	&$\Delta \vec{F} = \divergenz(\gradient(\vec{F}))$\\
 	&$\Delta \vec{F} = \nabla \cdot (\nabla \cdot \vec{F})$\\	 
 \end{tabular}
@@ -62,7 +62,7 @@ Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetische
 	\item Laplace-Operator in kartesischen Koordinaten
 	\[\Delta U(x,y,z) = \frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}\]
 	\item Laplace-Operator in Zylinderkoordinaten
-	\[\Delta U(\rho,\varphi,z) = \frac{1}{\rho} \dfrac{\partial}{\partial \rho} \left( \rho \frac{\partial U}{\partial \rho}\right) + \frac{1}{\rho^2}\frac{\partial^2 U}{\partial \varphi^2}+\dfrac{\partial^2 U}{\partial z^2} \]
+	\[\Delta U(r,\alpha,z) = \frac{1}{r} \dfrac{\partial}{\partial r} \left(r \frac{\partial U}{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2 U}{\partial \alpha^2}+\dfrac{\partial^2 U}{\partial z^2} \]
 	\item Laplace-Operator in Kugelkoordinaten
 	\[\Delta U(r,\vartheta,\varphi) = \frac{1}{r^2} \dfrac{\partial}{\partial r} \left( r^2 \frac{\partial U}{\partial r}\right) + \frac{1}{r^2 \sin(\vartheta)}\frac{\partial}{\partial \vartheta}\left(sin(\vartheta)\dfrac{\partial U}{\partial \vartheta} \right) +\frac{1}{r^2 sin^2(\vartheta)}\dfrac{\partial^2 U}{\partial \varphi^2}\]
 \end{itemize}
@@ -120,7 +120,7 @@ Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetische
 \end{tabular}
 \clearpage
 \pagebreak
-
+%TODO DGL 2 Ordnung mittels Homogen und Partikulär lösen
 \subsection{Integralgesetze}
 \subsubsection{Der Satz von Gauss}
 Das Volumenintegral über die Divergenz eines Vektorfeldes wird in ein Oberflächenintegral umgewandelt.\\

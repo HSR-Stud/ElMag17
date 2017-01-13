@@ -25,17 +25,21 @@ Die magnetoquasistatische Analyse wird gebraucht um bei Wechselstrom die Ersatzw
 \begin{tabular}{|p{.45\textwidth} |p{.45\textwidth}|}
 	\hline
 	\textbf{Differenzialgleichung der Durchflutung}\newline
-	\[\rotation \vec{H}=\nabla \times \vec{H}=\vec{J}\]&
-	\textbf{Poissongleichung}\newline
-	Die obige Gleichung wird mit Umweg über das Vektorpotential A des Magnetfeldes gelöst
-	\[\vec{E}=-\dfrac{\partial \vec{A}}{\partial t}\]
-	\[\Delta\vec{A}-\mu_{0}\sigma \dfrac{\partial \vec{A}}{\partial t}=-\mu_{0}\vec{J}\]\\
+	\[\rotation \vec{H}=\nabla \times \vec{H}=\vec{J}\]
+	\[\rotation \vec{B}=\nabla \times \vec{B}=\mu_{0}\vec{J}\]&
+	\textbf{Vektorpotential}\newline
+	Die Stromdichte besteht aus dem statischen Teil und dem induzierten Teil\newline
+	$J=\sigma \cdot E $ ``Statisch''\newline
+	$\vec{E}=-\dfrac{\partial \vec{A}}{\partial t}$ ``Induziert''
+	\[\Delta\vec{A}-\mu_{0}\sigma \dfrac{\partial \vec{A}}{\partial t}=-\mu_{0}\vec{J}\]
+	\[\Delta\vec{A}-j\omega\mu_{0}\sigma\vec{A}=-\mu_{0}\vec{J}\]\\
 	\hline
 \end{tabular}
 \subsection{Randbedingungen}
 \begin{itemize}
 	\item Magnetische Isolierung $\vec{n} \times \vec{A} =0$
 	\item Der Rand zwischen zwei Materialien $\vec{n} \times \vec{A_{1}}=\vec{n} \times \vec{A_{2}}$
+	\item Der Rand zwischen zwei Materialien $B_{1}=B_{2} \rightarrow \dfrac{dA_{1}}{d n}=\dfrac{dA_{2}}{d n} $
 \end{itemize}
 \subsection{Randwertproblem}
 \begin{minipage}{9cm}
@@ -49,5 +53,20 @@ Die magnetoquasistatische Analyse wird gebraucht um bei Wechselstrom die Ersatzw
 \begin{minipage}{8cm}
 	\includegraphics[width=4cm]{images/Randwertproblem.jpg}
 \end{minipage}
+\subsection{Vorgehen}
+	\begin{enumerate}
+		\item Partielle Differentialgleichung 2. Ordnung des Vektorpotentials aufstellen (Poisson oder Laplace)
+		\item Vereinfachung der partiellen DGL
+		\subitem Von welcher Variable hängt das Vektorpotential ab
+		\subitem $\dfrac{\partial \vec{A}}{\partial t}= j\omega\vec{A} $
+		\item Aufstellen der Randbedingungen
+		\subitem Randwerte für Vektorpotential und B-Feld
+		\item Welche Form hat die DGL 
+		\subitem Homogen $\ddot{f}(x) - f(x)=0$
+		\subitem Inhomogen $\ddot{f}(x) - f(x)=C$
+		\item DGL mittels Ansatz über Homogene und Partikuläre Lösung $Y=Y_{H}+Y_{P}$
+		\subitem Homogene Lösung: Charakteristisches Polynom
+		\subitem Partikuläre Lösung: Mittels Störterm, K ist konstant und einsetzen
+	\end{enumerate}
 \clearpage
 \pagebreak

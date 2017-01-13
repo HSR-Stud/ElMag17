@@ -25,16 +25,17 @@ Die magnetostatische Analyse basiert auf der gleichmässigen Bewegung des elektr
 	\textbf{Differenzialgleichung der Durchflutung}\newline
 	\[\rotation \vec{H}=\nabla \times \vec{H}=\vec{J}\]
 	\[\rotation \vec{B}=\nabla \times \vec{B}=\mu_{0}\vec{J}\]&
-	\textbf{Poissongleichung}\newline
-	Die obige Gleichung wird mit Umweg über das Vektorpotential A des Magnetfeldes gelöst
-	\[\nabla \times \vec{A}=\vec{B} \quad \nabla\cdot \vec{A} =0\]	
-	\[\Delta\vec{A}=-\mu_{0}\vec{J}\]\\
+	\textbf{Vektorpotential}\newline
+	\[\nabla \times \vec{A}=\vec{B} \quad\quad \nabla\cdot \vec{A} =0\]	
+	\[\Delta\vec{A}=-\mu_{0}\vec{J}\]
+	\[\Delta\vec{A}=0\]\\
 	\hline
 \end{tabular}
 \subsection{Randbedingungen}
 \begin{itemize}
 	\item Magnetische Isolierung $\vec{n} \times \vec{A} =0$
 	\item Der Rand zwischen zwei Materialien $\vec{n} \times \vec{A_{1}}=\vec{n} \times \vec{A_{2}}$
+	\item Der Rand zwischen zwei Materialien $B_{1}=B_{2} \rightarrow \dfrac{dA_{1}}{d n}=\dfrac{dA_{2}}{d n} $
 \end{itemize}
 \subsection{Randwertproblem}
 \begin{minipage}{8cm}
@@ -46,5 +47,16 @@ Die magnetostatische Analyse basiert auf der gleichmässigen Bewegung des elektr
 \begin{minipage}{8cm}
 	\includegraphics[width=4cm]{images/Randwertproblem.jpg}
 \end{minipage}
+\subsection{Vorgehen}
+	\begin{enumerate}
+		\item Partielle Differentialgleichung 2. Ordnung des Vektorpotentials aufstellen (Poisson oder Laplace)
+		\item Koordinatentransformation wenn nötig
+		\item Vereinfachung der partiellen DGL in eine gewöhnliche DGL 
+		\subitem Von welcher Variable hängt das Vektorpotential ab
+		\item Aufstellen der Randbedingungen
+		\subitem Randwerte für Vektorpotential und B-Feld
+		\item Gewöhnliche DGL 2x integrieren und nach Vektorpotential auflösen
+		\item Randwerte einsetzen und unbekannte Konstanten bestimmen
+	\end{enumerate}
 \clearpage
 \pagebreak

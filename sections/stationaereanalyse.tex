@@ -40,6 +40,7 @@ Die stationäre Strömungsanalyse wird für die Berechnung des Ersatzwiderstands
 		\item Der Rand mit bekannten Potential \[ \varphi = U \]
 		\item Der Rand der Symmetrie \[ \dfrac{\partial\varphi}{\partial n} = 0\]
 		\item Der Rand zwischen zwei Materialien \[\sigma_{1} \cdot \frac{d \varphi_{2}}{dn}=\sigma_{2} \cdot \frac{d \varphi_{1}}{dn}\]
+		\[J_{1}=J_{2}\]
 	\end{itemize}
 \end{minipage}
 \begin{minipage}{8cm}
@@ -54,5 +55,16 @@ Die stationäre Strömungsanalyse wird für die Berechnung des Ersatzwiderstands
 		\item $ \dfrac{\partial\varphi(x,y,z)}{\partial n} = 0 \in \Gamma_s$
 	\end{itemize}
 \end{multicols}
+\subsection{Vorgehen}
+	\begin{enumerate}
+		\item Partielle Differentialgleichung 2. Ordnung des Potentials aufstellen (Poisson oder Laplace)
+		\item Koordinatentransformation wenn nötig
+		\item Vereinfachung der partiellen DGL in eine gewöhnliche DGL 
+		\subitem Von welcher Variable hängt das Potential ab
+		\item Aufstellen der Randbedingungen
+		\subitem Randwerte für Potential und E-Feld
+		\item Gewöhnliche DGL 2x integrieren und nach Potential auflösen
+		\item Randwerte einsetzen und unbekannte Konstanten bestimmen
+	\end{enumerate}
 \clearpage
 \pagebreak
