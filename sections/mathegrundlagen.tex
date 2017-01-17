@@ -120,7 +120,51 @@ Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetische
 \end{tabular}
 \clearpage
 \pagebreak
-%TODO DGL 2 Ordnung mittels Homogen und Partikulär lösen
+\subsection{Lineare Differentialgleichung 2. Ordnung}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{8cm}p{8cm}}
+	\textbf{Form:} $y''+a_1\cdot y'+a_0\cdot y=f(x)$  &
+	\textbf{St"orglied:} $f(x)$\\
+	\textbf{Homogene Differentialgleichung:} $f(x)=0$ &
+	\textbf{Inhomogene Differentialgleichung:} $f(x)\neq 0$\\
+	\textbf{Allgemeine Lösung einer DGL: }	$Y=y_H+y_P$& \\
+\end{tabular}
+
+\subsubsection{Homogene Lösung $y_H$}
+\begin{tabular}{p{8cm}p{8cm}}
+	\textbf{Charakteristisches Polynom:}\newline
+	$\lambda^2+a_1\cdot\lambda+a_0=0$&	
+	\textbf{Durch Mitternachtsformel lösen: }\newline
+	$\lambda_{1,2}={\frac {-b\pm {\sqrt {b^{2}-4ac}}}{2a}}$\\
+	\textbf{Diskriminante: }\newline
+	$D = b^2-4ac $&\\
+\end{tabular}
+
+\begin{tabular}{|p{6cm}|p{8cm}|}
+	\hline
+	Falls $ \lambda_1\neq \lambda_2 \quad D > 0$&
+	$y_H=A_1e^{\lambda_1x}+A_2e^{\lambda_2x}$\\
+	\hline
+	Falls $\lambda_1= \lambda_2 \quad D = 0$&
+	$y_H=e^{\lambda_1x}(A_1+A_2\cdot x)$\\
+	\hline
+	Falls $\lambda_{1,2}= -\frac{a_1}{2} \pm jb \quad D < 0$&
+	$y_H=e^{-\frac{1}{2}a_1x}(A \cdot cos(b) +B \cdot sin(b))$\\
+	\hline
+\end{tabular}
+
+\subsubsection{Partikuläre Lösung $y_P$ durch Form des Störglieds $f(x)$}
+\textbf{Allgemeines Vorgehen:}\\
+1. Ermitteltes $y_P$ n mal ableiten \\
+2. Ableitungen in DGL einsetzen \\
+3. Koeffizientenvergleich \\
+\vspace{0.2cm}\\
+\includegraphics[width=\linewidth]{images/DGL_Part_1.jpg}
+\includegraphics[width=\linewidth]{images/DGL_Part_2.jpg}
+\includegraphics[width=\linewidth]{images/DGL_Part_3.jpg}
+\clearpage
+\pagebreak
+
 \subsection{Integralgesetze}
 \subsubsection{Der Satz von Gauss}
 Das Volumenintegral über die Divergenz eines Vektorfeldes wird in ein Oberflächenintegral umgewandelt.\\
