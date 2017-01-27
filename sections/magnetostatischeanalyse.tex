@@ -35,7 +35,7 @@ Die magnetostatische Analyse basiert auf der gleichmässigen Bewegung des elektr
 \begin{itemize}
 	\item Magnetische Isolierung $\vec{n} \times \vec{A} =0$
 	\item Der Rand zwischen zwei Materialien $\vec{n} \times \vec{A_{1}}=\vec{n} \times \vec{A_{2}}$
-	\item Der Rand zwischen zwei Materialien $B_{1}=B_{2} \rightarrow \dfrac{dA_{1}}{d n}=\dfrac{dA_{2}}{d n} $
+	\item Der Rand zwischen zwei Materialien $B_{1}=B_{2} \Rightarrow \dfrac{dA_{1}}{d n}=\dfrac{dA_{2}}{d n} $
 \end{itemize}
 \subsection{Randwertproblem}
 \begin{minipage}{8cm}
@@ -58,5 +58,13 @@ Die magnetostatische Analyse basiert auf der gleichmässigen Bewegung des elektr
 		\item Gewöhnliche DGL 2x integrieren und nach Vektorpotential auflösen
 		\item Randwerte einsetzen und unbekannte Konstanten bestimmen
 	\end{enumerate}
+
+$\boxed{\vec B=\nabla\times\vec{A} = 
+	\det
+	\begin{vmatrix}
+	\vec{e_r} & \vec{e_{\varphi}}&\vec{e_z}\\
+	\dfrac{\partial}{\partial r} & \dfrac{1}{r}\dfrac{\partial}{\partial \varphi}& \dfrac{\partial}{\partial z}\\
+	A_r& A_{\varphi} & A_z
+	\end{vmatrix}}$
 \clearpage
 \pagebreak

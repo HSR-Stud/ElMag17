@@ -7,7 +7,7 @@ Die elektrostatische Analyse arbeitet mit dem elektrostatischen (ruhenden) Feld.
 	{\centering\tabbild[width=4cm]{images/Gauss.png}\par}&
 	Der Fluss des Vektors $\vec{D} = \varepsilon\cdot\vec{E}$ durch eine geschlossene orientierte Fläche (A) ist gleich der gesamten elektrischen Ladung Q, die von der Fläche (A) umgeben ist.\newline
 	\[\varoiint\limits_{(A)}\vec{D}\cdot\vec{dA} = Q \quad oder \quad \varoiint\limits_{(A)}\vec{E}\cdot\vec{dA} = \dfrac{Q}{\varepsilon}\]
-	\\
+	\\[-0.7cm]
 	\hline
 	\textbf{Wirbelfreiheit des elektrostatischen Feldes}\newline
 	{\centering\tabbild[width=4cm]{images/Wirbelfreiheit}\par}& Das Kurvenintegral des elektrostatischen Feldes $\vec{E}$ über jede geschlossene orientierte Kurve (C) ist gleich null. Das heisst das Kurvenintegral des elektrische Feldes ist nur von der Position des Anfangs- und Endpunkt abhängig. \newline 
@@ -21,9 +21,10 @@ Die elektrostatische Analyse arbeitet mit dem elektrostatischen (ruhenden) Feld.
 	\textbf{Elektrische Energie}\newline
 	Falls eine Umwandlung von kartesischen Koordinaten in Zylinder- oder Kugelkoordinaten nötig ist müssen die Gesetze der Flächen- und Volumenelemente beachtet werden (Bronstein S.540 \& S.546)
 	&\[W_{2D}=\frac{1}{2} \iint\limits_{A} \rho \cdot \varphi \, dA \quad \quad W_{3D}=\frac{1}{2} \iiint\limits_{V} \rho \cdot \varphi \, dV \]
-	\[W_{2D} = \frac{1}{2} \iint\limits_{A} D \cdot  E \, dA \quad \quad
+	\[W_{2D} = \frac{1}{2} \iint\limits_{A} D \cdot  E \, dA = \frac{1}{2} \iint\limits_{A}\varepsilon\cdot E^2 \, dA\quad \quad
 	W_{3D}=\frac{1}{2} \iiint\limits_{V} D \cdot E \, dV
-	\]\\
+	\]
+	\[W_e = \frac{1}{2}\cdot C\cdot U^2\]\\
 	\hline
 \end{tabular}
 \clearpage
@@ -48,7 +49,7 @@ Die elektrostatische Analyse arbeitet mit dem elektrostatischen (ruhenden) Feld.
 		\item Der Rand mit bekannten Potential \[ \varphi(x,y,z) = A \]
 		\item Der Rand der Symmetrie \[ \dfrac{\partial\varphi(x,y,z)}{\partial n} = 0\]
 		\item Der Rand zwischen zwei Materialien \[\varphi_{1}=\varphi_{2}\]
-		\[\epsilon_1 \cdot E_{1}=\epsilon_2 \cdot E_{2}\]
+		\[ D_1 = D_2 \Rightarrow \varepsilon_1 \cdot E_{1}=\varepsilon_2 \cdot E_{2} \Rightarrow \varepsilon_1\cdot\dfrac{\partial\varphi_1}{\partial x} = \varepsilon_2\cdot\dfrac{\partial\varphi_2}{\partial x}\]
 	\end{itemize}
 \end{minipage}
 \begin{minipage}{8cm}

@@ -26,13 +26,19 @@ Die magnetoquasistatische Analyse wird gebraucht um bei Wechselstrom die Ersatzw
 	\hline
 	\textbf{Differenzialgleichung der Durchflutung}\newline
 	\[\rotation \vec{H}=\nabla \times \vec{H}=\vec{J}\]
-	\[\rotation \vec{B}=\nabla \times \vec{B}=\mu_{0}\vec{J}\]&
+	\[\rotation \vec{B}=\nabla \times \vec{B}=\mu_{0}\vec{J}\] \vspace{1cm} \[\vec{J} = \vec{J_q} + \vec{J_i}\] 
+	{\begin{align*}
+		\vec{J} &= \vec{J_q} + \sigma\vec{E_i} \\
+		&= \vec{J_q} -\sigma\dfrac{\partial\vec{A}}{\partial t}\\
+		&= \vec{J_q} - j\omega\sigma A
+	\end{align*}} \vspace{-1cm}&
 	\textbf{Vektorpotential}\newline
 	Die Stromdichte besteht aus dem statischen Teil und dem induzierten Teil\newline
-	$J=\sigma \cdot E $ ``Statisch''\newline
-	$\vec{E}=-\dfrac{\partial \vec{A}}{\partial t}$ ``Induziert''
-	\[\Delta\vec{A}-\mu_{0}\sigma \dfrac{\partial \vec{A}}{\partial t}=-\mu_{0}\vec{J}\]
-	\[\Delta\vec{A}-j\omega\mu_{0}\sigma\vec{A}=-\mu_{0}\vec{J}\]\\
+	$J_i=\sigma \cdot E_i $ \qquad``statisch''\newline
+	$\vec{E_i}=-\dfrac{\partial \vec{A}}{\partial t}$ \qquad ``induziert''\newline \newline
+	$ \left. \begin{array}{c} \Delta\vec{A}-\mu_{0}\sigma \dfrac{\partial \vec{A}}{\partial t}=-\mu_{0}\vec{J}\\\Delta\vec{A}-j\omega\mu_{0}\sigma\vec{A}=-\mu_{0}\vec{J} \end{array} \right\}$ Im Leiter\newline \newline \newline 
+		$ \left. \begin{array}{c} \Delta\vec{A}-\mu_{0}\sigma \dfrac{\partial \vec{A}}{\partial t}=0\\\Delta\vec{A}-j\omega\mu_{0}\sigma\vec{A}=0 \end{array} \qquad \right\}$ Ausserhalb des Leiters\\
+		& \\
 	\hline
 \end{tabular}
 \subsection{Randbedingungen}
