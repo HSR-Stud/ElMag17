@@ -38,8 +38,8 @@ Die stationäre Strömungsanalyse wird für die Berechnung des Ersatzwiderstands
 	\begin{itemize}
 		\item Der geerdete Rand \[\varphi = 0\]
 		\item Der Rand mit bekannten Potential \[ \varphi = U \]
-		\item Der Rand der Symmetrie \[ \dfrac{\partial\varphi}{\partial n} = 0\]
-		\item Der Rand zwischen zwei Materialien \[J_{1}=J_{2} \Rightarrow \sigma_{1} \cdot \frac{d \varphi_{2}}{dn}=\sigma_{2} \cdot \frac{d \varphi_{1}}{dn}\]
+		\item Der Rand der Symmetrie \[ \dfrac{\partial\varphi}{\partial r} = 0\]
+		\item Der Rand zwischen zwei Materialien \[J_{1}=J_{2} \Rightarrow \sigma_{1} \cdot \frac{\diff \varphi_{2}}{\diff r}=\sigma_{2} \cdot \frac{\diff \varphi_{1}}{\diff r}\]
 	\end{itemize}
 \end{minipage}
 \begin{minipage}{8cm}
@@ -51,7 +51,7 @@ Die stationäre Strömungsanalyse wird für die Berechnung des Ersatzwiderstands
 		\item $\dfrac{\partial^2\varphi}{\partial x^2} +  \dfrac{\partial^2\varphi}{\partial y^2} + \dfrac{\partial^2\varphi}{\partial z^2}=0 $
 		\item $\varphi(x,y,z)=0 \in \Gamma_e$
 		\item $\varphi(x,y,z)=U \in \Gamma_b$
-		\item $ \dfrac{\partial\varphi(x,y,z)}{\partial n} = 0 \in \Gamma_s$
+		\item $ \dfrac{\partial\varphi(x,y,z)}{\partial r} = 0 \in \Gamma_s$
 	\end{itemize}
 \end{multicols}
 \subsection{Vorgehen}

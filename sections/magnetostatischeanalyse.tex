@@ -9,7 +9,7 @@ Die magnetostatische Analyse basiert auf der gleichmässigen Bewegung des elektr
 	 \[ \oint\limits_{(C)}\vec{B}\cdot\vec{dl} = \mu_{0}\iint\limits_{(A)}\vec{J}\cdot\vec{dA}  \quad \quad\vec{B}=\mu_{0}\mu_{r}\cdot \vec{H}\]\\
 	\hline
 	{\centering\textbf{Durchflutungsgesetz}\par}
-	& \[ \oint\limits_{(C)}\vec{H}\cdot\vec{dl} = \sum\limits_{k = 1}^{n} I_k = \theta \] 
+	& \[ \oint\limits_{(C)}\vec{H}\cdot\vec{dl} = \sum\limits_{k = 1}^{n} I_k \] 
 	 \[ \oint\limits_{(C)}\vec{B}\cdot\vec{dl} = \mu_{0}\sum\limits_{k = 1}^{n} I_k = \theta \]\\
 	\hline
 	\textbf{Coulombsches Gesetz} \newline
@@ -24,18 +24,21 @@ Die magnetostatische Analyse basiert auf der gleichmässigen Bewegung des elektr
 	\hline
 	\textbf{Differenzialgleichung der Durchflutung}\newline
 	\[\rotation \vec{H}=\nabla \times \vec{H}=\vec{J}\]
-	\[\rotation \vec{B}=\nabla \times \vec{B}=\mu_{0}\vec{J}\]&
+	\[\rotation \vec{B}=\nabla \times \vec{B}=\mu_{0}\vec{J}\]
+    &
 	\textbf{Vektorpotential}\newline
 	\[\nabla \times \vec{A}=\vec{B} \quad\quad \nabla\cdot \vec{A} =0\]	
+    Im Leiter $\rightarrow$ Poisson
 	\[\Delta\vec{A}=-\mu_{0}\vec{J}\]
-	\[\Delta\vec{A}=0\]\\
-	\hline
+    Ausserhalb des Leiters $\rightarrow$ Laplace
+	\[\Delta\vec{A}=0\]
+	\\ \hline
 \end{tabular}
 \subsection{Randbedingungen}
 \begin{itemize}
 	\item Magnetische Isolierung $\vec{n} \times \vec{A} =0$
-	\item Der Rand zwischen zwei Materialien $\vec{n} \times \vec{A_{1}}=\vec{n} \times \vec{A_{2}}$
-	\item Der Rand zwischen zwei Materialien $B_{1}=B_{2} \Rightarrow \dfrac{dA_{1}}{d n}=\dfrac{dA_{2}}{d n} $
+	\item Der Rand zwischen zwei Materialien $\vec{n} \times \vec{A_{1}}=\vec{n} \times \vec{A_{2}}$ \qquad$\rightarrow$ kontinuität des Potentials
+	\item Der Rand zwischen zwei Materialien $B_{1}=B_{2} \Rightarrow \dfrac{dA_{1}}{d n}=\dfrac{dA_{2}}{d n} $ $\rightarrow$ kontinuität der Flussdichte
 \end{itemize}
 \subsection{Randwertproblem}
 \begin{minipage}{8cm}
