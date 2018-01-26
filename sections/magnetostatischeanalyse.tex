@@ -5,12 +5,12 @@ Die magnetostatische Analyse basiert auf der gleichmässigen Bewegung des elektr
 	\hline 
 	\textbf{Ampèresches Gesetz} \newline
 	{\centering\tabbild[width=4cm]{images/ampgesetz.png}\par} & Das Ampèresche Gesetz definiert die Verteilung des magnetischen Feldes durch eine geschlossene Kurve und dem gesamten Strom durch die entsprechende Fläche
-	\[ \oint\limits_{(C)}\vec{H}\cdot\vec{dl} = \iint\limits_{(A)}\vec{J}\cdot\vec{dA}\] \newline
+	\[ \oint\limits_{(C)}\vec{H}\cdot\vec{dl} = \iint\limits_{(A)}\vec{J}\cdot\vec{dA} = \sum\limits_{k = 1}^{n} I_k= \theta\] \newline
 	 \[ \oint\limits_{(C)}\vec{B}\cdot\vec{dl} = \mu_{0}\iint\limits_{(A)}\vec{J}\cdot\vec{dA}  \quad \quad\vec{B}=\mu_{0}\mu_{r}\cdot \vec{H}\]\\
 	\hline
 	{\centering\textbf{Durchflutungsgesetz}\par}
-	& \[ \oint\limits_{(C)}\vec{H}\cdot\vec{dl} = \sum\limits_{k = 1}^{n} I_k \] 
-	 \[ \oint\limits_{(C)}\vec{B}\cdot\vec{dl} = \mu_{0}\sum\limits_{k = 1}^{n} I_k = \theta \]\\
+	& \[ \oint\limits_{(C)}\vec{H}\cdot\vec{dl} = \sum\limits_{k = 1}^{n} I_k= \theta \] 
+	 \[ \oint\limits_{(C)}\vec{B}\cdot\vec{dl} = \mu_{0}\sum\limits_{k = 1}^{n} I_k  \]\\
 	\hline
 	\textbf{Coulombsches Gesetz} \newline
 	{\centering\tabbild[width=4cm]{images/quellenfreiheit.png}\par} & Der magnetische Fluss durch eine geschlossene Fläche ist immer Null. Somit sind die magnetische Feldlinien immer geschlossen. Es gibt keine magnetische Monopole. Das magnetische Feld ist quellenfrei \newline
@@ -26,7 +26,7 @@ Die magnetostatische Analyse basiert auf der gleichmässigen Bewegung des elektr
 	\[\rotation \vec{H}=\nabla \times \vec{H}=\vec{J}\]
 	\[\rotation \vec{B}=\nabla \times \vec{B}=\mu_{0}\vec{J}\]
     &
-	\textbf{Vektorpotential}\newline
+	\textbf{Vektorpotential $\vec A$}\newline
 	\[\nabla \times \vec{A}=\vec{B} \quad\quad \nabla\cdot \vec{A} =0\]	
     Im Leiter $\rightarrow$ Poisson
 	\[\Delta\vec{A}=-\mu_{0}\vec{J}\]
@@ -37,9 +37,18 @@ Die magnetostatische Analyse basiert auf der gleichmässigen Bewegung des elektr
 \subsection{Randbedingungen}
 \begin{itemize}
 	\item Magnetische Isolierung $\vec{n} \times \vec{A} =0$
-	\item Der Rand zwischen zwei Materialien $\vec{n} \times \vec{A_{1}}=\vec{n} \times \vec{A_{2}}$ \qquad$\rightarrow$ kontinuität des Potentials
-	\item Der Rand zwischen zwei Materialien $B_{1}=B_{2} \Rightarrow \dfrac{dA_{1}}{d n}=\dfrac{dA_{2}}{d n} $ $\rightarrow$ kontinuität der Flussdichte
+	\item Der Rand zwischen zwei Materialien $\vec{n} \times \vec{A_{1}}=\vec{n} \times \vec{A_{2}}$ \quad $A_{z1} = A_{z2}$ \qquad$\rightarrow$ Kontinuität des Potentials
+	\item Der Rand zwischen zwei Materialien $B_{1}=B_{2} \Rightarrow \dfrac{-dA_{1}}{d n}=\dfrac{-dA_{2}}{d n} $\qquad $\rightarrow$ Kontinuität der Flussdichte
+%    \item B($r=\infty$) $\neq$ 0
+    \item $\vec{A}(r=0) \neq \infty \qquad \vec{A}(r=0)=0 $
 \end{itemize}
+$\boxed{\vec B=\nabla\times\vec{A} = 
+    \det
+    \begin{vmatrix}
+    \vec{e_r} & \vec{e_{\varphi}}&\vec{e_z}\\
+    \dfrac{\partial}{\partial r} & \dfrac{1}{r}\dfrac{\partial}{\partial \varphi}& \dfrac{\partial}{\partial z}\\
+    A_r& A_{\varphi} & A_z
+    \end{vmatrix}}$\textbf{Zylinder/Polar -Koord \bronst{733}{13.2.7.3}}
 \subsection{Randwertproblem}
 \begin{minipage}{8cm}
 	\begin{itemize}
@@ -61,13 +70,5 @@ Die magnetostatische Analyse basiert auf der gleichmässigen Bewegung des elektr
 		\item Gewöhnliche DGL 2x integrieren und nach Vektorpotential auflösen
 		\item Randwerte einsetzen und unbekannte Konstanten bestimmen
 	\end{enumerate}
-
-$\boxed{\vec B=\nabla\times\vec{A} = 
-	\det
-	\begin{vmatrix}
-	\vec{e_r} & \vec{e_{\varphi}}&\vec{e_z}\\
-	\dfrac{\partial}{\partial r} & \dfrac{1}{r}\dfrac{\partial}{\partial \varphi}& \dfrac{\partial}{\partial z}\\
-	A_r& A_{\varphi} & A_z
-	\end{vmatrix}}$
 \clearpage
 \pagebreak

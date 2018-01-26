@@ -9,14 +9,14 @@ Die stationäre Strömungsanalyse wird für die Berechnung des Ersatzwiderstands
 	\hline
 	\textbf{Kontinuitätsgleichung} \newline
 	{\centering\tabbild[width=4cm]{images/kontinuitat.JPG}\par} & Der herausfliessende Strom aus einer geschlossenen Fläche ist gleich der Abnahme der Ladung \newline
-		\[ I = -\dfrac{dQ}{dt} = -\dfrac{d}{dt}\iiint\limits_{(V)}\varrho\cdot dV = -\iiint\limits_{(V)}\dfrac{d\varrho}{dt}\cdot dV \]
+		\[ I = -\dfrac{dQ}{dt} = -\dfrac{d}{dt}\iiint\limits_{(V)}\rho\cdot dV = -\iiint\limits_{(V)}\dfrac{d\rho}{dt}\cdot dV \]
 	Dies resultiert in der Kontinuitätsgleichung (Allgemeiner Fall)
-	 \[I= \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = -\iiint\limits_{(V)}\dfrac{d\varrho}{dt}\cdot dV \]\\
+	 \[I= \varoiint\limits_{(A)}\vec{J}\cdot\vec{dA} = -\iiint\limits_{(V)}\dfrac{d\rho}{dt}\cdot dV \]\\
 	\hline
 	\textbf{Ohmsches Gesetz}\newline
 	{\centering\tabbild[width=4cm]{images/OhmschesGesetz.png}\par} & 
-	\[ J= \sigma \cdot E\]
-	\[ R = \varrho\cdot\dfrac{l}{A}\]
+	\[ J= \sigma \cdot E \qquad \qquad I = J \cdot A\]
+	\[ R = \varrho\cdot\dfrac{l}{A} \qquad \qquad  U= \int E(x) \diff x \qquad E = \frac{- \diff \varrho}{\diff r}\]
 	\[ \sigma = \dfrac{1}{\varrho}\]
 	\[ G = \sigma\cdot\dfrac{A}{l} \]\\
 	\hline
@@ -39,7 +39,8 @@ Die stationäre Strömungsanalyse wird für die Berechnung des Ersatzwiderstands
 		\item Der geerdete Rand \[\varphi = 0\]
 		\item Der Rand mit bekannten Potential \[ \varphi = U \]
 		\item Der Rand der Symmetrie \[ \dfrac{\partial\varphi}{\partial r} = 0\]
-		\item Der Rand zwischen zwei Materialien \[J_{1}=J_{2} \Rightarrow \sigma_{1} \cdot \frac{\diff \varphi_{2}}{\diff r}=\sigma_{2} \cdot \frac{\diff \varphi_{1}}{\diff r}\]
+		\item Der Rand zwischen zwei Materialien \[\varphi_{1}=\varphi_{2}\]
+        \[J_{1}=J_{2} \Rightarrow \sigma_{1} \cdot \frac{\diff \varphi_{1}}{\diff r}=\sigma_{2} \cdot \frac{\diff \varphi_{2}}{\diff r}\]
 	\end{itemize}
 \end{minipage}
 \begin{minipage}{8cm}

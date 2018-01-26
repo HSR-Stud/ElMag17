@@ -11,7 +11,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}	%ä,ü...
 % Seitenränder
-\usepackage[left=1cm,right=1cm,top=0.5cm,bottom=0.5cm,includeheadfoot]{geometry}
+\usepackage[left=1cm,right=1cm,top=0.5cm,bottom=0.2cm,includeheadfoot]{geometry}
+\setlength{\headsep}{5pt} 
 % Sprachpaket
 \usepackage[english, ngerman]{babel} % Silbentrennung und Rechtschreibung Englisch und Deutsch
 
@@ -51,7 +52,7 @@
 \usepackage{xcolor}                 % \pagecolor{color}, \textcolor{color}{text}, \colorbox{color}{text}, \fcolorbox{border-color}{fill-color}{text}									
 \usepackage{titlesec}
 % Zum Bilder einfach in Tabellen einfügen (valign=t)
-\usepackage[none]{hyphenat}
+%\usepackage[none]{hyphenat}
 \usepackage[export]{adjustbox}
 \usepackage{circuitikz}
 \usetikzlibrary{decorations.markings,arrows}
@@ -68,7 +69,7 @@
 \newcommand{\subsubadd}[1]{\textcolor{black}{\mbox{#1}}}
 \newcommand{\formelbuch}[1]{$_{\textcolor{red}{\mbox{\small{S#1}}}}$}
 
-\newcommand{\kuchling}[1]{$_{\textcolor{red}{\mbox{\small{Kuchling #1}}}}$}
+\newcommand{\bronst}[2]{$_{\texttt{\textcolor{red}{\mbox{\small{TdM. S.#1,K.#2}}}}}$}
 \newcommand{\stoecker}[1]{$_{\textcolor{grey}{\mbox{\small{Stöcker #1}}}}$}
 \newcommand{\sachs}[1]{$_{\textcolor{blue}{\mbox{\small{Sachs S. #1}}}}$}
 \newcommand{\hartl}[1]{$_{\textcolor{green}{\mbox{\small{Hartl S. #1}}}}$}

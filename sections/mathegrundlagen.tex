@@ -1,6 +1,6 @@
 \section{Mathematische Grundlagen}
-\subsection{Vektorfelder}
-\subsubsection{Divergenz}
+\subsection{Vektorfelder \bronst{716}{13}}
+\subsubsection{Divergenz \bronst{726}{13.2.4}}
 	Die Divergenz beschreibt die Quellendichte eines Skalarfeldes. 
 	Interpretiert man ein Vektorfeld als Strömungsfeld, so gibt die Divergenz für jede
 	Stelle die Tendenz an, ob ein Teilchen in der Nähe zu diesem Punkt hin- bzw.
@@ -10,7 +10,7 @@
 	
 	$\boxed{\divergenz \vec{F}=\nabla \cdot \vec{F}= \frac{\partial F}{\partial x}+\frac{\partial F}{\partial y}+\frac{\partial F}{\partial z}}$
 
-\subsubsection{Rotation}
+\subsubsection{Rotation \bronst{728}{13.2.5}}
 Interpretiert man ein Vektorfeld als Strömungsfeld, so gibt die Rotation für jeden
 Ort an, wie schnell und um welche Achse ein mitschwimmender Körper rotieren
 würde. Ein Vektorfeld, dessen Rotation überall null ist, nennt man wirbelfrei.\\
@@ -20,7 +20,7 @@ $\boxed{\rotation(\vec F)=\nabla\times\vec{F} =
 	(F_3)_y - (F_2)_z\\
 	(F_1)_z - (F_3)_x\\
 	(F_2)_x - (F_1)_y
-	\end{pmatrix} = \left({\frac {\partial F_{z}}{\partial y}}-{\frac {\partial F_{y}}{\partial z}}\right){\hat {e}}_{x}+\left({\frac {\partial F_{x}}{\partial z}}-{\frac {\partial F_{z}}{\partial x}}\right){\hat {e}}_{y}+\left({\frac {\partial F_{y}}{\partial x}}-{\frac {\partial F_{x}}{\partial y}}\right){\hat {e}}_{z} \quad 
+	\end{pmatrix} = \left({\frac {\partial F_{z}}{\partial y}}-{\frac {\partial F_{y}}{\partial z}}\right){\hat {e}}_{x}+\left({\frac {\partial F_{x}}{\partial z}}-{\frac {\partial F_{z}}{\partial x}}\right){\hat {e}}_{y}+\left({\frac {\partial F_{y}}{\partial x}}-{\frac {\partial F_{x}}{\partial y}}\right){\hat {e}}_{z} =
 	\det
 	\begin{vmatrix}
 	e_x & e_y&e_z\\
@@ -28,7 +28,7 @@ $\boxed{\rotation(\vec F)=\nabla\times\vec{F} =
 	F_x& F_y & F_z
 	\end{vmatrix}}$
 
-\subsubsection{Gradient}
+\subsubsection{Gradient \bronst{724}{13.2.2}}
 Der Gradient zeigt in einem Vektorfeld immer in die Richtung des steilsten Anstiegs. \\
 
 $\boxed{\gradient(f)= \nabla \cdot f= 	
@@ -38,24 +38,28 @@ $\boxed{\gradient(f)= \nabla \cdot f=
 	\frac{\partial f}{\partial z}
 	\end{pmatrix} ={\frac {\partial f}{\partial x}}{\hat {e}}_{x}+{\frac {\partial f}{\partial y}}{\hat {e}}_{y}+{\frac {\partial f}{\partial z}}{\hat {e}}_{z} }$
 
-\subsubsection{Vektorpotential}
+\subsubsection{Vektorpotential \bronst{742}{13.4.2}}
+\begin{minipage}{0.7\linewidth}
 Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetischen Flussdichte B(r) zu vereinfachen. \\
 	$\boxed{\begin{matrix}
 		B=\mu H\\
 		B=\rotation A\\
 		\varphi=\oint\limits_{C}A dr
 		\end{matrix}}$
-
-\subsubsection{Vektorfeldoperatoren}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+    \includegraphics[width=0.5\linewidth]{images/rotA}
+\end{minipage}
+\subsubsection{Vektorfeldoperatoren \bronst{730}{13.2.6}}
 \begin{tabular}{ll}
 	\textbf{Nabla-Operator $\nabla$} & \textbf{Laplace-Operator $\Delta$}\\
 	Operator um kontextabhängig & Operator um einem Skalarfeld\\
 	Divergenz, Rotation oder Gradient darzustellen  &  die Divergenz seines Gradienten zuzuordnen\\
-	$\nabla F=\frac{\partial F}{\partial x}+\frac{\partial F}{\partial y}+\frac{\partial F}{\partial z}$&$\Delta F=\frac{\partial^{2}F}{\partial x^{2}F}+\frac{\partial^{2}F}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}$\\
+	$\nabla F=\frac{\partial F}{\partial x}+\frac{\partial F}{\partial y}+\frac{\partial F}{\partial z}$&$\Delta F=\frac{\partial^{2}F}{\partial x^{2}}+\frac{\partial^{2}F}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}$\\
 	&$\Delta \vec{F} = \divergenz(\gradient(\vec{F}))$\\
 	&$\Delta \vec{F} = \nabla \cdot (\nabla \cdot \vec{F})$\\	 
 \end{tabular}
-\subsubsection{Rechenregeln}
+\subsubsection{Rechenregeln \bronst{732}{13.2.7.2}}
 \begin{itemize}
 	\item $\rotation(\gradient f) = 0 \qquad $ ``Gradientenfeld ist wirbelfrei''
 	\item $\divergenz(\rotation \vec{v}) = 0 \qquad $ ``Feld der Rotation ist quellenfrei''
@@ -63,9 +67,8 @@ Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetische
 	\item $\rotation(f\vec{v}) = (\gradient f) \times \vec{v} + f \rotation \vec{v}$
 	\item $\rotation(\rotation \vec{v}) = \gradient(\divergenz \vec{v}) - \Delta \vec{v}$
 \end{itemize}
-\subsubsection{Laplace-Operator Koordinatentransformation}
+\subsubsection{Laplace-Operator Koordinatentransformation \bronst{733}{13.2.7.3}}
 \begin{minipage}{15cm}
-
 \begin{itemize}
 	\item Laplace-Operator in kartesischen Koordinaten
 	\[\Delta \varphi(x,y,z) = \frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}\]\vspace{0.5cm}
@@ -82,7 +85,8 @@ Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetische
 \includegraphics[width=3.3cm]{images/Kugelkoord.png}
 \end{minipage}
 \subsection{Differentialrechnung}
-\subsubsection{Ableitungsregeln}
+\subsubsection{Ableitungsregeln \bronst{450}{Tab 6.2}}
+{\small
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|l|l|}
 	\hline \textbf{Konstantenregeln}& $c'=0'$\\
@@ -98,7 +102,7 @@ Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetische
 	\hline	\textbf{Differentation der Umkehrfunktion} & $(f^{-1})'(y)=\frac{1}{f'(x)} $\\
 	\hline 
 \end{tabular}
-\subsubsection{Ableitung elementarer Funktionen}
+\subsubsection{Ableitung elementarer Funktionen \bronst{446}{Tab 6.1}}
 \renewcommand{\arraystretch}{2.2}
 \begin{tabular}{|l|l||l|l|}
 	\hline
@@ -133,9 +137,18 @@ Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetische
 	\hline $\cot x \quad (x\neq k\pi, k\in\mathbb{Z})$ & $\dfrac{-1}{\sin^2 x}=-cosec^2x$ & $\ln f(x) \quad (f(x)> 0)$ & $\dfrac{f'(x)}{f(x)}$\\
 	\hline
 \end{tabular}
+}
+\subsubsection{Laplace-Gleichung \bronst{744}{13.5.1}}
+%\vspace{-2\baselineskip}
+Bestimmung des Potentials eines Vektorfelds in dem \textbf{keine} Quellen enthalten sind.
+\[ \Delta \varphi = \dfrac{\partial^2 \varphi}{\partial x^2} +  \dfrac{\partial^2 \varphi}{\partial y^2} + \dfrac{\partial^2 \varphi}{\partial z^2} = 0 \]
+\subsubsection{Poisson-Gleichung \bronst{744}{13.5.2}}
+%\vspace{-2\baselineskip}
+Bestimmung des Potentials eines Vektorfelds in dem Quellen enthalten sind.
+\[ \Delta \varphi = \dfrac{\partial^2 \varphi}{\partial x^2} +  \dfrac{\partial^2 \varphi}{\partial y^2} + \dfrac{\partial^2 \varphi}{\partial z^2} \neq 0 \]
 \clearpage
 \pagebreak
-\subsection{Lineare Differentialgleichung 2. Ordnung}
+\subsection{Lineare Differentialgleichung 2. Ordnung \bronst{574}{9.1.2.6}}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{p{8cm}p{8cm}}
 	\textbf{Form:} $y''+a_1\cdot y'+a_0\cdot y=f(x)$  &
@@ -220,13 +233,13 @@ Das Vektorpotential A(r) ist eine Hilfsgrösse um den Umgang mit der magnetische
 \pagebreak
 
 \subsection{Integralgesetze}
-\subsubsection{Der Satz von Gauss}
+\subsubsection{Der Satz von Gauss \bronst{739}{13.3.3.1}}
 Das Volumenintegral über die Divergenz eines Vektorfeldes wird in ein Oberflächenintegral umgewandelt.\\
 $\boxed{\int\limits_V \divergenz \vec F dv = \oint\limits_{\partial V} \vec F \cdot \vec{dA}}$
-\subsubsection{Der Satz von Stokes}
+\subsubsection{Der Satz von Stokes \bronst{740}{13.3.3.2}}
 Das Oberflächenintegral über die Rotation eines Vektorfeldes wird in ein Kurvenintegral umgewandelt. \\
 $\boxed{\int\limits_A \rotation \vec{F}\cdot d\vec{A}  = \oint\limits_{\partial A}\vec{F}\cdot d\vec{s}}$
-\subsubsection{Der Satz von Green}
+\subsubsection{Der Satz von Green \bronst{740}{13.3.3.3}}
 Die Greensche Formel beschreibt den Zusammenhang zwischen Wegintegral und einem Oberflächenintegral.\\
 $\boxed{\int\limits_A \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} dA = \oint\limits_{\partial A}\vec{F}\cdot d\vec{s}}$
 \subsection{Weiteres}
@@ -239,7 +252,10 @@ Durch die Gesetze von Stokes und Gauss können diese 4 Gesetze in die Maxwellgle
     &\\
 	\textbf{Elektrodynamik} & Die Elektrodynamik befasst sich mit bewegten elektrischen Ladungen und mit zeitlich veränderlichen elektrischen und magnetischen Feldern. Diese Vorgänge werden durch die Maxwellgleichungen beschrieben. \\
 \end{longtable}
+\vspace{-2\baselineskip}
 \subsection{Einheiten}
+%\vspace{-\baselineskip}
+\enlargethispage{\baselineskip}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|p{3.5cm}|p{1.5cm}|p{3cm}||p{3.5cm}|p{1.5cm}|p{3.2cm}|}
 	\hline
@@ -273,6 +289,12 @@ Durch die Gesetze von Stokes und Gauss können diese 4 Gesetze in die Maxwellgle
 	\textbf{Spez. Leitfähigkeit}&$\sigma$&$[\sigma]=\frac{S}{m}$&
 	\textbf{Spez. Widerstand}&$\rho $&$[\rho]=\Omega m $\\
 	\hline
+    \textbf{el. Potential}&$\varphi$&$[\varphi]= V$&
+    \textbf{el. Ladungsverteil.}&$\rho$&$[\rho]=\frac{As}{m^3}$\\
+    \hline
+    \textbf{Vektorpotential}&\textbf{$\vec A$}& [\textbf{$\vec A$}] = $\frac{A}{Vs}$&
+    & & \\
+    \hline
 \end{tabular}
 
 \clearpage
