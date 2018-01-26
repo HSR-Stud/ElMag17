@@ -5,7 +5,7 @@ Die magnetoquasistatische Analyse wird gebraucht um bei Wechselstrom die Ersatzw
 	\hline 
 	\textbf{Ampèresches Gesetz} \newline
 	{\centering\tabbild[width=4cm]{images/ampgesetz.png}\par} & Das Ampèresche Gesetz definiert die Verteilung des magnetischen Feldes durch eine geschlossene Kurve ist der gesamte Strom durch die entsprechende Fläche
-	\[ \oint\limits_{(C)}\vec{H}\cdot\vec{dl} = \iint\limits_{(A)}\vec{J}\cdot\vec{dA}\] \newline
+	\[ \oint\limits_{(C)}\vec{H}\cdot\vec{dl} = \sum_{k=1}^n I_k =\iint\limits_{(A)}\vec{J}\cdot\vec{dA}\] \newline
 	\[ \oint\limits_{(C)}\vec{B}\cdot\vec{dl} = \mu_{0}\iint\limits_{(A)}\vec{J}\cdot\vec{dA} \quad \quad\vec{B}=\mu_{0}\mu_{r}\cdot \vec{H}\]\\
 	\hline
 	\textbf{Coulombsches Gesetz} \newline
@@ -13,7 +13,7 @@ Die magnetoquasistatische Analyse wird gebraucht um bei Wechselstrom die Ersatzw
 	\[ \oiint\limits_{(A)}\vec{B}\cdot\vec{dA} = 0\]\\
 	\hline
 	\textbf{Faradaysches Induktionsgesetz}
-	{\centering\tabbild[width=4cm]{images/faradaygesetz.png}\par} & Der zeitabhängige magnetische Fluss induziert elektrische Spannung in der vom Fluss durchflossenen Spule.\newline
+	{\centering\tabbild[width=4cm]{images/faradaygesetz.png}\par} & Der zeitabhängige magnetische Fluss $\Phi_{m} $ induziert elektrische Spannung$u_i$ in der vom Fluss durchflossenen Spule.\newline
 	\[u_{i}=-\frac{\partial \Phi_{m}}{\partial t}\] \newline
 	\[\Phi_{m}=\oiint\limits_{(S)} \vec{B}\cdot \vec{dS}\quad und \quad u_{i}=\oint \limits_{(C)}\vec{E}\cdot \vec{dl}\]\newline
 	\[\oint \limits_{(C)}\vec{E}\cdot \vec{dl}= - \frac{\partial}{\partial t} \oiint\limits_{(S)} \vec{B}\cdot \vec{dS}\]\\
@@ -36,9 +36,10 @@ Die magnetoquasistatische Analyse wird gebraucht um bei Wechselstrom die Ersatzw
 	Die Stromdichte besteht aus dem statischen Teil und dem induzierten Teil\newline
 	$J_i=\sigma \cdot E_i $ \qquad``statisch''\newline
 	$\vec{E_i}=-\dfrac{\partial \vec{A}}{\partial t}$ \qquad ``induziert''\newline \newline
+    \textbf{Poisson}\newline
 	$ \left. \begin{array}{c} \Delta\vec{A}-\mu_{0}\sigma \dfrac{\partial \vec{A}}{\partial t}=-\mu_{0}\vec{J}\\\Delta\vec{A}-j\omega\mu_{0}\sigma\vec{A}=-\mu_{0}\vec{J} \end{array} \right\}$ Im Leiter\newline \newline \newline 
+    \textbf{Laplace}\newline
 		$ \left. \begin{array}{c} \Delta\vec{A}-\mu_{0}\sigma \dfrac{\partial \vec{A}}{\partial t}=0\\\Delta\vec{A}-j\omega\mu_{0}\sigma\vec{A}=0 \end{array} \qquad \right\}$ Ausserhalb des Leiters\\
-		& \\
 	\hline
 \end{tabular}
 \subsection{Randbedingungen}
